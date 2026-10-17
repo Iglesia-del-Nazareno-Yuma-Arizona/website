@@ -88,7 +88,7 @@ export const color =
 
 // Border Radius:
 
-export const round =
+export const borderRadius =
     (key: keyof ThemeType["borderRadius"]) =>
     ({ theme }: { theme: ThemeType }) =>
         theme.borderRadius[key];

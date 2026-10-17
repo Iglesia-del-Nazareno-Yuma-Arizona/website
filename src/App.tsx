@@ -1,5 +1,6 @@
 import { useLayoutEffect, type PropsWithChildren } from "react";
-import { useLocation } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
+import Header from "./components/Header";
 
 const Wrapper = ({ children }: PropsWithChildren) => {
     const location = useLocation();
@@ -16,7 +17,8 @@ function App() {
     return (
         <main>
             <Wrapper>
-                <p>Placeholder</p>
+                <Header />
+                <Routes></Routes>
             </Wrapper>
         </main>
     );
