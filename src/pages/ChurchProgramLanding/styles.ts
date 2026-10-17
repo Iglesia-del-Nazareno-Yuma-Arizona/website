@@ -1,13 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import { borderRadius, theme, color } from "../../styles/theme";
 
-// --- Animations ---
-
-const pulse = keyframes`
-0%, 100% { opacity: 1; }
-50% { opacity: 0.5; }
-`;
-
 // --- Components ---
 
 export const PageWrapper = styled.div`
@@ -30,8 +23,8 @@ export const MainContainer = styled.article`
     justify-content: flex-start;
 `;
 
-export const VerificationBadge = styled.aside`
-    display: flex;
+export const BackBadgeLink = styled.a`
+    display: inline-flex;
     align-items: center;
     justify-content: space-between;
     padding: 0.5rem 0.75rem;
@@ -40,28 +33,41 @@ export const VerificationBadge = styled.aside`
     margin-bottom: 1.25rem;
     font-size: 0.75rem;
     color: ${color("onSurfaceVariant")};
+    transition: all 0.15s ease;
+    align-self: flex-start;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: ${color("surfaceContainerLow")};
+
+            span {
+                transform: translateX(-2px);
+            }
+        }
+    }
 `;
 
-export const StatusIndicator = styled.div`
+export const BackBadgeContent = styled.div`
     display: flex;
     align-items: center;
     gap: 0.5rem;
 `;
 
-export const PulseDot = styled.span`
-    width: 0.5rem;
-    height: 0.5rem;
-    border-radius: ${borderRadius("full")};
-    background-color: ${color("secondary")};
-    animation: ${pulse} 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+export const BackIcon = styled.span.attrs({
+    className: "material-symbols-outlined",
+})`
+    font-size: 0.875rem;
+    color: ${color("secondary")};
+    transition: transform 0.15s ease;
 `;
 
-export const VerificationText = styled.span`
+export const BackText = styled.span`
     font-weight: 500;
     letter-spacing: 0.025rem;
+    color: ${color("onSurface")};
 `;
 
-export const VerificationSubText = styled.span`
+export const BackSubText = styled.span`
     color: ${color("outline")};
     font-weight: 400;
 `;
