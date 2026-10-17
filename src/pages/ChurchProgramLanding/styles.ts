@@ -1,5 +1,5 @@
-import styled, { keyframes } from "styled-components";
-import { borderRadius, theme, color } from "../../styles/theme";
+import styled from "styled-components";
+import { borderRadius, color } from "../../styles/theme";
 
 // --- Components ---
 
@@ -151,16 +151,16 @@ export const SubHeading = styled.p`
 `;
 
 export const BodyDescription = styled.p`
-    font-size: 0.875rem;
+    font-size: 1rem;
     color: ${color("onSurfaceVariant")};
     line-height: 1.625;
     margin: 0;
 `;
 
 export const ItalicDescription = styled.p`
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: ${color("outline")};
-    margin: 0.375rem 0 0 0;
+    margin: 1.375rem 0 0 0;
     font-style: italic;
     font-weight: 300;
 `;
@@ -228,8 +228,8 @@ export const TagBadge = styled.mark<{ isSecondary?: boolean }>`
 export const LangDescription = styled.p`
     font-size: 0.75rem;
     color: ${color("onSurfaceVariant")};
-    font-weight: 400;
-    margin: 0;
+    font-weight: 550;
+    margin: 5px 0 0;
 `;
 
 export const ArrowIcon = styled.span`

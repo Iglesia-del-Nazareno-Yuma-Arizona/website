@@ -5,12 +5,13 @@ import LanguageDetector from "i18next-browser-languagedetector";
 i18n.use(LanguageDetector)
     .use(initReactI18next)
     .init({
-        fallbackLang: "en",
+        fallbackLng: "en",
+        supportedLngs: ["es", "en"],
         resources: {
             en: {},
             es: {},
         },
-        interpolation: { escapedValue: false },
+        interpolation: { escapeValue: false },
     });
 
 export default i18n;

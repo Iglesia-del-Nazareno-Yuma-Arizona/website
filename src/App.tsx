@@ -2,6 +2,7 @@ import { useLayoutEffect, type PropsWithChildren } from "react";
 import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ChurchProgramLanding from "./pages/ChurchProgramLanding";
 
 const Wrapper = ({ children }: PropsWithChildren) => {
     const location = useLocation();
@@ -19,7 +20,9 @@ function App() {
         <Wrapper>
             <Header />
             <main>
-                <Routes></Routes>
+                <Routes>
+                    <Route path="/program" element={<ChurchProgramLanding />} />
+                </Routes>
             </main>
             <Footer />
         </Wrapper>

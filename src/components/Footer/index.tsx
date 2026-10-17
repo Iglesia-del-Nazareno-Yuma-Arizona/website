@@ -11,7 +11,7 @@ const Footer = () => {
             </S.Address>
 
             <S.Copyright>
-                {new Date().getFullYear()} Yuma Church of the Nazarene
+                {new Date().getFullYear()} Church of the Nazarene
             </S.Copyright>
         </S.Footer>
     );

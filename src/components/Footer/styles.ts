@@ -16,7 +16,7 @@ export const Address = styled.p`
 `;
 
 export const FooterTitle = styled.p`
-    font-size: 0.75rem;
+    font-size: 1rem;
     font-weight: 500;
     color: ${color("onSurface")};
     margin: 0;
