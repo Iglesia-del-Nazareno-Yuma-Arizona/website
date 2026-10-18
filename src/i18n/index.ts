@@ -9,10 +9,10 @@ i18n.use(LanguageDetector)
         fallbackLng: "en",
         supportedLngs: ["es", "en"],
         resources: {
-            en: {
+            es: {
                 program: programEs,
             },
-            es: {
+            en: {
                 program: programEn,
             },
         },

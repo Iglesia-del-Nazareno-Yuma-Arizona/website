@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { borderRadius, color } from "../../styles/theme";
+import { Link } from "react-router-dom";
 
 // --- Components ---
 
@@ -253,7 +254,7 @@ export const CardFooter = styled.div`
     }
 `;
 
-export const LanguageLink = styled.a`
+export const LanguageLink = styled(Link)`
     display: block;
     padding: 1rem;
     background-color: ${color("surfaceContainerLowest")};

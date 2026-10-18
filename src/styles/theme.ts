@@ -58,7 +58,7 @@ export const theme = {
     },
 
     borderRadius: {
-        card: "0.75rem",
+        card: "2rem",
         default: "1rem",
         lg: "2rem",
         xl: "3rem",

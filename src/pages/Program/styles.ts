@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { borderRadius, color } from "../../styles/theme";
+import { Link } from "react-router-dom";
 
 // --- Layout & Container ---
 
@@ -21,7 +22,54 @@ export const MetadataSection = styled.section`
     gap: 0.75rem;
 `;
 
-export const ScanBadgePill = styled.div``;
+export const BackBadgeLink = styled(Link)`
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.75rem;
+    border-radius: ${borderRadius("full")};
+    background-color: ${color("surfaceContainerLow")};
+    margin-bottom: 1.25rem;
+    font-size: 0.75rem;
+    color: ${color("onSurfaceVariant")};
+    transition: all 0.15s ease;
+    align-self: flex-start;
+
+    @media (hover: hover) {
+        &:hover {
+            background-color: ${color("surfaceContainerLow")};
+
+            span {
+                transform: translateX(-2px);
+            }
+        }
+    }
+`;
+
+export const BackBadgeContent = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+`;
+
+export const BackIcon = styled.span.attrs({
+    className: "material-symbols-outlined",
+})`
+    font-size: 0.875rem;
+    color: ${color("secondary")};
+    transition: transform 0.15s ease;
+`;
+
+export const BackText = styled.span`
+    font-weight: 500;
+    letter-spacing: 0.025rem;
+    color: ${color("onSurface")};
+`;
+
+export const BackSubText = styled.span`
+    color: ${color("outline")};
+    font-weight: 400;
+`;
 
 export const MetadataHeader = styled.header`
     border-bottom: 1px solid rgba(199, 198, 202, 0.3);
@@ -37,7 +85,7 @@ export const MainTitle = styled.h1`
 `;
 
 export const PastorMetaRow = styled.p`
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: ${color("onSurfaceVariant")};
     margin: 0.375rem 0 0 0;
     display: flex;
@@ -90,14 +138,14 @@ export const SectionHeaderTitle = styled.div`
 `;
 
 export const SectionSubLabel = styled.span`
-    font-size: 11px;
+    font-size: 13px;
     font-weigth: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: ${color("secondary")};
 `;
 
-export const SectionMainTtitle = styled.h2`
+export const SectionMainTitle = styled.h2`
     font-size: 1.25rem;
     font-weight: 700;
     letter-spacing: -0.025em;
@@ -113,7 +161,8 @@ export const DateBadge = styled.span`
     background-color: ${color("surfaceContainerHigh")};
 `;
 
-export const TimelineContainer = styled.ol`
+export const TimelineContainer = styled.ul`
+    list-style: none;
     position: relative;
     padding-left: 1.5rem;
     border-left: 1px solid rgba(199, 198, 202, 0.4);
@@ -171,7 +220,7 @@ export const LiturgyMeta = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: ${color("secondary")};
     font-weight: 600;
 `;
@@ -179,11 +228,11 @@ export const LiturgyMeta = styled.div`
 export const LiturgyCategory = styled.span`
     color: ${color("outline")};
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 12px;
     letter-spacing: 0.05rem;
 `;
 
-export const HighLightBadge = styled.span<{
+export const HighlightBadge = styled.span<{
     variant?: "secondary" | "primary";
 }>`
     pading: 0.125rem 0.5rem;
@@ -199,7 +248,8 @@ export const HighLightBadge = styled.span<{
     font-size: 10px;
     letter-spacing: 0.05em;
     font-weight: 600;
-    text-tansform: uppercase;
+    padding: 5px 10px;
+    text-transform: uppercase;
 `;
 
 export const CardTitleRow = styled.div`
@@ -221,7 +271,7 @@ export const LiturgyTitle = styled.h3`
 `;
 
 export const LiturgyText = styled.p`
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: ${color("onSurfaceVariant")};
     margin: 0;
     line-height: 1.5;
@@ -236,7 +286,7 @@ export const ScriptureBox = styled.div`
     background-color: ${color("surfaceContainerLow")};
     border-radius: ${borderRadius("card")};
     border: 1px solid rgba(199, 198, 202, 0.2);
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: ${color("onSurface")};
     font-style: italic;
     line-height: 1.6;
@@ -264,7 +314,7 @@ export const SongRow = styled.div`
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    font-size: 0.75rem;
+    font-size: 0.9rem;
 
     .music-icon {
         font-size: 0.875rem;
@@ -283,7 +333,7 @@ export const SongRow = styled.div`
 
 export const GreetingTimeTag = styled.p`
     margin: 0;
-    font-size: 11px;
+    font-size: 0.8rem;
     color: ${color("secondary")};
     font-style: italic;
     font-weight: 500;
@@ -293,7 +343,7 @@ export const ReflectionBox = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.375rem;
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: ${color("onSurfaceVariant")};
 
     p {
@@ -302,18 +352,19 @@ export const ReflectionBox = styled.div`
 `;
 
 export const ReflectionTitle = styled.span`
-    font-size: 11px;
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     color: ${color("secondary")};
+    margin-top: 0.5rem;
 `;
 
 export const NoteBanner = styled.div`
     padding: 0.625rem;
     border-radius: 0.5rem;
     background-color: ${color("surfaceContainer")};
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: ${color("onSurfaceVariant")};
     font-weight: 500;
     font-style: italic;
@@ -340,7 +391,7 @@ export const DoxologyBox = styled.div`
 
     blockquote {
         margin: 0;
-        font-size: 0.75rem;
+        font-size: 1rem;
         font-style: italic;
         color: ${color("onSurface")};
         line-height: 1.6;
@@ -348,7 +399,7 @@ export const DoxologyBox = styled.div`
 `;
 
 export const DoxologyTitle = styled.span`
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;

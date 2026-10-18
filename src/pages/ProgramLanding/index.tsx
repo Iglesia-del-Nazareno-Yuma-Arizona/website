@@ -1,7 +1,11 @@
 import * as S from "./styles";
 import { formatDate } from "../../utils/date";
+import { useTranslation } from "react-i18next";
+import church from "../../assets/IDN-front.webp";
 
 const ProgramLanding = () => {
+    const { i18n } = useTranslation();
+
     return (
         <S.PageWrapper>
             <S.MainContainer>
@@ -14,7 +18,7 @@ const ProgramLanding = () => {
 
                 {/* Hero image card*/}
                 <S.HeroFigure>
-                    <S.HeroImage src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbKWEF2Q8Y8wZzSrxoXWE9OB_MIh4XAb-wfVN63g0sk1wznvkr6OZKb5Bl8KnOUUlPrh_JBiDQ4RICIiU1bO5_WYTNdi4JuukUcYwjWabFSRTQGoNyJ6YHxDnlM51Mdu3BVfHKO6dH6U_1--mDcJhZemDuheWYh684GRVJ-Z0MKUVTDvLUKj-7nRcTMTxlU1kDF4dH5fbhSs1pY2h84V_59Gn60oRCawD4nMbayhAsP9WdRiQ1PrBy" />
+                    <S.HeroImage src={church} />
                     <S.HeroCaption>
                         <S.HeroTag>Comunidad de Fe &amp; Esperanza</S.HeroTag>
                         <S.HeroTitle>
@@ -47,7 +51,10 @@ const ProgramLanding = () => {
                     aria-label="Selección de idioma / Language Selection"
                 >
                     {/* Option A: Español */}
-                    <S.LanguageLink href="#orden-es">
+                    <S.LanguageLink
+                        to="/program/service"
+                        onClick={() => i18n.changeLanguage("es")}
+                    >
                         <S.CardHeader>
                             <S.LanguageInfo>
                                 <S.LangAvatar>ES</S.LangAvatar>
@@ -76,7 +83,10 @@ const ProgramLanding = () => {
                         </S.CardFooter>
                     </S.LanguageLink>
 
-                    <S.LanguageLink href="#order-es">
+                    <S.LanguageLink
+                        to="/program/service"
+                        onClick={() => i18n.changeLanguage("en")}
+                    >
                         <S.CardHeader>
                             <S.LanguageInfo>
                                 <S.LangAvatar>EN</S.LangAvatar>

@@ -1,7 +1,11 @@
 export const es = {
+    backButton: "Go back to language selection",
+
     mainHeading: "Programa del Culto Dominical",
 
     pastor: "Roberto Rodríguez Albavera, Pastor",
+
+    date: "es-US",
 
     liturgy: "liturgia dominical",
 
@@ -52,14 +56,12 @@ export const es = {
     },
 
     prayer: {
+        intercession: "intercesión",
         title: "Oración Pastoral",
         subtitle: "Motivos y peticiones de oración.",
     },
 
-    video: {
-        title: "Video",
-        subtitle: "Reforma Protestante",
-    },
+    video: "Protestant Reformation",
 
     offering: {
         title: "Presentación de Diezmos y ofrendas",
@@ -83,9 +85,13 @@ export const es = {
 };
 
 export const en = {
+    backButton: "Volver a la selección de idioma",
+
     mainHeading: "Sunday Service Program",
 
     pastor: "Pastor Roberto Rodríguez Albavera",
+
+    date: "en-US",
 
     liturgy: "Sunday Liturgy",
 
@@ -134,14 +140,12 @@ export const en = {
     },
 
     prayer: {
+        intercession: "intercession",
         title: "Pastoral Prayer",
         subtitle: "Prayer requests and motives.",
     },
 
-    video: {
-        title: "Video",
-        subtitle: "Protestant Reformation",
-    },
+    video: "Protestant Reformation",
 
     offering: {
         title: "Tithes and Offerings",

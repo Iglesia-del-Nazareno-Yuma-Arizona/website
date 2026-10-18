@@ -3,6 +3,7 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ProgramLanding from "./pages/ProgramLanding";
+import Program from "./pages/Program";
 
 const Wrapper = ({ children }: PropsWithChildren) => {
     const location = useLocation();
@@ -22,6 +23,7 @@ function App() {
             <main>
                 <Routes>
                     <Route path="/program" element={<ProgramLanding />} />
+                    <Route path="/program/service" element={<Program />} />
                 </Routes>
             </main>
             <Footer />
