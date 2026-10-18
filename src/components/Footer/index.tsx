@@ -11,7 +11,9 @@ const Footer = () => {
             </S.Address>
 
             <S.Copyright>
-                {new Date().getFullYear()} Church of the Nazarene
+                Texto bíblico: Reina-Valera 1960 © Sociedades Bíblicas en
+                América Latina, 1960. Derechos renovados 1988, Sociedades
+                Bíblicas Unidas. Utilizado con permiso.
             </S.Copyright>
         </S.Footer>
     );

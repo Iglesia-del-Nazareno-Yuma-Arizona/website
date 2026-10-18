@@ -1,6 +1,7 @@
 import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
+import { es as programEs, en as programEn } from "../pages/Program/translation";
 
 i18n.use(LanguageDetector)
     .use(initReactI18next)
@@ -8,8 +9,12 @@ i18n.use(LanguageDetector)
         fallbackLng: "en",
         supportedLngs: ["es", "en"],
         resources: {
-            en: {},
-            es: {},
+            en: {
+                program: programEs,
+            },
+            es: {
+                program: programEn,
+            },
         },
         interpolation: { escapeValue: false },
     });
