@@ -61,7 +61,7 @@ export const es = {
         subtitle: "Motivos y peticiones de oración.",
     },
 
-    video: "Protestant Reformation",
+    video: "Reforma Protestante",
 
     offering: {
         title: "Presentación de Diezmos y ofrendas",
