@@ -1,7 +1,7 @@
 import * as S from "./styles";
 import { formatDate } from "../../utils/date";
 
-const ChurchProgramLanding = () => {
+const ProgramLanding = () => {
     return (
         <S.PageWrapper>
             <S.MainContainer>
@@ -108,4 +108,4 @@ const ChurchProgramLanding = () => {
     );
 };
 
-export default ChurchProgramLanding;
+export default ProgramLanding;
