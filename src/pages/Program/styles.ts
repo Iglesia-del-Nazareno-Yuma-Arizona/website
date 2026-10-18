@@ -206,7 +206,7 @@ export const LiturgyCard = styled.article<{ isHighlighted?: boolean }>`
     background-color: ${color("surfaceContainerLowest")};
     padding: 1rem;
     border-radius: ${borderRadius("card")};
-    border: ${({ isHighlighted, theme }) =>
+    border: ${({ isHighlighted }) =>
         isHighlighted
             ? `2px solid rgba(113, 91, 38, 0.4)`
             : `1px solid rgba(199, 198, 202, 0.3)`};
