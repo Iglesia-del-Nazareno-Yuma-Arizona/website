@@ -23,14 +23,20 @@ const Program = () => {
                     <S.MainTitle>{t("mainHeading")}</S.MainTitle>
 
                     <S.PastorMetaRow>
-                        <span className="material-symbols-outlined meta-icon">
+                        <span
+                            className="material-symbols-outlined meta-icon"
+                            translate="no"
+                        >
                             person
                         </span>
                         <strong>{t("pastor")}</strong>
                     </S.PastorMetaRow>
 
                     <S.DateMetaRow>
-                        <span className="material-symbols-outlined meta-icon">
+                        <span
+                            className="material-symbols-outlined meta-icon"
+                            translate="no"
+                        >
                             calendar_today
                         </span>
                         <span>{formatDate(t(i18n.language))}</span>
@@ -116,7 +122,10 @@ const Program = () => {
 
                             <S.SongListGroup>
                                 <S.SongRow>
-                                    <span className="material-symbols-outlined meta-icon">
+                                    <span
+                                        className="material-symbols-outlined meta-icon"
+                                        translate="no"
+                                    >
                                         music_note
                                     </span>
                                     <strong>«Por Siempre»</strong>
@@ -183,7 +192,10 @@ const Program = () => {
                             <S.LiturgyTitle>Video</S.LiturgyTitle>
 
                             <S.SongRow>
-                                <span className="material-symbols-outlined meta-icon">
+                                <span
+                                    className="material-symbols-outlined meta-icon"
+                                    translate="no"
+                                >
                                     movie
                                 </span>
                                 <strong>{t("video")}</strong>
@@ -207,7 +219,10 @@ const Program = () => {
                             </S.LiturgyTitle>
 
                             <S.SongRow>
-                                <span className="material-symbols-outlined music-icon">
+                                <span
+                                    className="material-symbols-outlined music-icon"
+                                    translate="no"
+                                >
                                     music_note
                                 </span>
                                 <strong>«Señor Mi Redentor y Roca»</strong>
@@ -253,7 +268,10 @@ const Program = () => {
                             </S.ReflectionBox>
 
                             <S.NoteBanner>
-                                <span className="material-symbols-outlined">
+                                <span
+                                    className="material-symbols-outlined"
+                                    translate="no"
+                                >
                                     info
                                 </span>
                                 <span>({t("offering.parishioner")})</span>
@@ -277,7 +295,10 @@ const Program = () => {
                             </S.LiturgyTitle>
 
                             <S.SongRow>
-                                <span className="material-symbols-outlined music-icon">
+                                <span
+                                    className="material-symbols-outlined music-icon"
+                                    translate="no"
+                                >
                                     music_note
                                 </span>
                                 <strong>«Corre a Cristo»</strong>
