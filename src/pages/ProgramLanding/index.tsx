@@ -21,7 +21,7 @@ const ProgramLanding = () => {
                     <S.HeroImage src={church} />
                     <S.HeroCaption>
                         <S.HeroTag>Comunidad de Fe &amp; Esperanza</S.HeroTag>
-                        <S.HeroTitle>
+                        <S.HeroTitle translate="no">
                             Bienvenido a Casa <span>/ Welcome Home</span>
                         </S.HeroTitle>
                     </S.HeroCaption>
@@ -39,7 +39,7 @@ const ProgramLanding = () => {
                         idioma para acceder a la guía de adoración en vivo.
                     </S.BodyDescription>
 
-                    <S.ItalicDescription>
+                    <S.ItalicDescription translate="no">
                         We're glad to have you join us for our service today.
                         Select your language to access the live worship guide.
                     </S.ItalicDescription>
@@ -71,7 +71,10 @@ const ProgramLanding = () => {
                                     </S.LangDescription>
                                 </div>
                             </S.LanguageInfo>
-                            <S.ArrowIcon className="material-symbols-outlined">
+                            <S.ArrowIcon
+                                className="material-symbols-outlined"
+                                translate="no"
+                            >
                                 arrow_forward
                             </S.ArrowIcon>
                         </S.CardHeader>
@@ -91,25 +94,32 @@ const ProgramLanding = () => {
                             <S.LanguageInfo>
                                 <S.LangAvatar>EN</S.LangAvatar>
                                 <div>
-                                    <S.LangTitle>
+                                    <S.LangTitle translate="no">
                                         English
-                                        <S.TagBadge>Main service</S.TagBadge>
+                                        <S.TagBadge translate="no">
+                                            Main service
+                                        </S.TagBadge>
                                     </S.LangTitle>
-                                    <S.LangDescription>
+                                    <S.LangDescription translate="no">
                                         Digital Order of Worship &amp; notes.
                                     </S.LangDescription>
                                 </div>
                             </S.LanguageInfo>
-                            <S.ArrowIcon className="material-symbols-outlined">
+                            <S.ArrowIcon
+                                className="material-symbols-outlined"
+                                translate="no"
+                            >
                                 arrow_forward
                             </S.ArrowIcon>
                         </S.CardHeader>
                         <S.CardFooter>
-                            <span>
+                            <span translate="no">
                                 Scripture passages, hymns, prayer list &amp;
                                 notes
                             </span>
-                            <span className="action">Continue</span>
+                            <span className="action" translate="no">
+                                Continue
+                            </span>
                         </S.CardFooter>
                     </S.LanguageLink>
                 </S.LanguageNav>

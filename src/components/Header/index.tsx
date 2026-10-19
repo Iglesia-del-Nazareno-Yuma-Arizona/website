@@ -6,7 +6,10 @@ const Header = () => {
             <S.HeaderBrandGroup>
                 <S.BrandLink href="#">
                     <S.IconWrapper className="brand-icon-wrapper">
-                        <S.ChurchIcon className="material-symbols-outlined">
+                        <S.ChurchIcon
+                            className="material-symbols-outlined"
+                            translate="no"
+                        >
                             church
                         </S.ChurchIcon>
                     </S.IconWrapper>
