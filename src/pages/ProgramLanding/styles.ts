@@ -237,8 +237,12 @@ export const LanguageLink = styled(Link)`
     background-color: ${color("surfaceContainerLowest")};
     border-radius: ${borderRadius("default")};
     border: 1px solid rgba(199, 198, 202, 0.4);
-    transition: all 0.15s ease;
+    transition: all 0.2s ease-in-out;
     position: relative;
+
+    ${ArrowIcon} {
+        transition: transform 0.3s ease;
+    }
 
     @media (hover: hover) {
         &:hover {
@@ -249,6 +253,7 @@ export const LanguageLink = styled(Link)`
             }
 
             ${ArrowIcon} {
+                transform: translateX(8px);
                 color: ${color("primary")};
             }
         }

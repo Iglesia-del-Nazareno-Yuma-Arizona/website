@@ -100,7 +100,7 @@ const ProgramLanding = () => {
                                         </S.TagBadge>
                                     </S.LangTitle>
                                     <S.LangDescription translate="no">
-                                        Digital Order of Worship &amp; notes.
+                                        See order of worship &amp; notes.
                                     </S.LangDescription>
                                 </div>
                             </S.LanguageInfo>
