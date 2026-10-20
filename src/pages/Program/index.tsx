@@ -185,10 +185,6 @@ const Program = () => {
                     <S.TimelineItem>
                         <S.TimelineDot />
                         <S.LiturgyCard>
-                            <S.LiturgyMeta>
-                                <S.LiturgyCategory>video</S.LiturgyCategory>
-                            </S.LiturgyMeta>
-
                             <S.LiturgyTitle>Video</S.LiturgyTitle>
 
                             <S.SongRow>

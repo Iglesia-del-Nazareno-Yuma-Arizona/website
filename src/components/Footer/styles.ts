@@ -8,7 +8,7 @@ export const Footer = styled.footer`
     border-top: 1px solid rgba(199, 198, 202, 0.2);
 `;
 
-export const Address = styled.p`
+export const Address = styled.address`
     font-style: normal;
     display: flex;
     flex-direction: column;

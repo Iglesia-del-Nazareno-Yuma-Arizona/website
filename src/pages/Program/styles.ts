@@ -28,11 +28,12 @@ export const BackBadgeLink = styled(Link)`
     justify-content: space-between;
     padding: 0.5rem 0.75rem;
     border-radius: ${borderRadius("full")};
+    border: 2px solid rgb(70, 70, 74);
     background-color: ${color("surfaceContainerLow")};
     margin-bottom: 1.25rem;
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: ${color("onSurfaceVariant")};
-    transition: all 0.15s ease;
+    transition: all 1s ease;
     align-self: flex-start;
 
     @media (hover: hover) {
@@ -56,6 +57,7 @@ export const BackIcon = styled.span.attrs({
     className: "material-symbols-outlined",
 })`
     font-size: 0.875rem;
+    font-weight: 600;
     color: ${color("secondary")};
     transition: transform 0.15s ease;
 `;
@@ -138,8 +140,8 @@ export const SectionHeaderTitle = styled.div`
 `;
 
 export const SectionSubLabel = styled.span`
-    font-size: 13px;
-    font-weigth: 600;
+    font-size: 14px;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: ${color("secondary")};
@@ -347,6 +349,7 @@ export const ReflectionBox = styled.div`
     color: ${color("onSurfaceVariant")};
 
     p {
+        line-height: 1.75rem;
         margin: 0;
     }
 `;

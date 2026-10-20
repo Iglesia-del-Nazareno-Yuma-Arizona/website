@@ -24,7 +24,7 @@ export const MainContainer = styled.article`
     justify-content: flex-start;
 `;
 
-export const BackBadgeLink = styled.a`
+export const DateBadge = styled.div`
     display: inline-flex;
     align-items: center;
     justify-content: space-between;
@@ -36,41 +36,18 @@ export const BackBadgeLink = styled.a`
     color: ${color("onSurfaceVariant")};
     transition: all 0.15s ease;
     align-self: flex-start;
-
-    @media (hover: hover) {
-        &:hover {
-            background-color: ${color("surfaceContainerLow")};
-
-            span {
-                transform: translateX(-2px);
-            }
-        }
-    }
 `;
 
-export const BackBadgeContent = styled.div`
+export const DateBadgeContent = styled.div`
     display: flex;
     align-items: center;
     gap: 0.5rem;
 `;
 
-export const BackIcon = styled.span.attrs({
-    className: "material-symbols-outlined",
-})`
-    font-size: 0.875rem;
-    color: ${color("secondary")};
-    transition: transform 0.15s ease;
-`;
-
-export const BackText = styled.span`
+export const DateText = styled.span`
     font-weight: 500;
     letter-spacing: 0.025rem;
     color: ${color("onSurface")};
-`;
-
-export const BackSubText = styled.span`
-    color: ${color("outline")};
-    font-weight: 400;
 `;
 
 export const HeroFigure = styled.figure`
@@ -190,17 +167,17 @@ export const LangAvatar = styled.span`
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2rem;
-    height: 2rem;
+    width: 2.2rem;
+    height: 2.2rem;
     border-radius: ${borderRadius("full")};
     background-color: ${color("surfaceContainer")};
     font-weight: 600;
-    font-size: 0.75rem;
+    font-size: 1.2rem;
     color: ${color("primary")};
 `;
 
 export const LangTitle = styled.h3`
-    font-size: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
     color: ${color("onSurface")};
     display: flex;
@@ -209,25 +186,25 @@ export const LangTitle = styled.h3`
     margin: 0;
 `;
 
-export const TagBadge = styled.mark<{ isSecondary?: boolean }>`
-    font-size: 10px;
+export const TagBadge = styled.mark<{ $isSecondary?: boolean }>`
+    font-size: 0.7rem;
     text-transform: uppercase;
     font-weight: 600;
     padding: 0.125rem 0.5rem;
     border-radius: ${borderRadius("full")};
-    background-color: ${({ isSecondary, theme }) =>
-        isSecondary
+    background-color: ${({ $isSecondary, theme }) =>
+        $isSecondary
             ? theme.colors.secondaryContainer
             : theme.colors.surfaceContainerHigh};
-    color: ${({ isSecondary, theme }) =>
-        isSecondary
+    color: ${({ $isSecondary, theme }) =>
+        $isSecondary
             ? theme.colors.onSecondaryContainer
             : theme.colors.onSurfaceVariant};
     letter-spacing: 0.05rem;
 `;
 
 export const LangDescription = styled.p`
-    font-size: 0.75rem;
+    font-size: 0.9rem;
     color: ${color("onSurfaceVariant")};
     font-weight: 550;
     margin: 5px 0 0;
@@ -240,12 +217,12 @@ export const ArrowIcon = styled.span`
 `;
 
 export const CardFooter = styled.div`
-    paddint-top: 0.5rem;
+    padding-top: 0.5rem;
     border-top: 1px solid rgba(229, 226, 225, 0.6);
     display: flex;
     align-items: center;
     justify-content: space-between;
-    font-size: 11px;
+    font-size: 14px;
     color: ${color("outline")};
 
     span.action {
@@ -278,6 +255,16 @@ export const LanguageLink = styled(Link)`
 
         &:active {
             transform: scale(0.98);
+        }
+    }
+
+    @media (max-width: 768px) {
+        border: 2px solid ${color("primary")};
+
+        @media (hover: hover) {
+            &:hover {
+                border-color: ${color("secondaryFixedDim")};
+            }
         }
     }
 `;
