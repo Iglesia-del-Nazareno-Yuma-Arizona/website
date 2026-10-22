@@ -7,14 +7,13 @@ const ProgramLanding = () => {
     const { i18n } = useTranslation();
 
     return (
-        <S.PageWrapper>
+        <S.PageWrapper className="reveal reveal-up">
             <S.MainContainer>
-                <S.BackBadgeLink href="#language-selection">
-                    <S.BackBadgeContent>
-                        {/* <S.BackIcon>arrow_back</S.BackIcon> */}
-                        <S.BackText>{formatDate("es-US")}</S.BackText>
-                    </S.BackBadgeContent>
-                </S.BackBadgeLink>
+                <S.DateBadge>
+                    <S.DateBadgeContent>
+                        <S.DateText>{formatDate("es-US")}</S.DateText>
+                    </S.DateBadgeContent>
+                </S.DateBadge>
 
                 {/* Hero image card*/}
                 <S.HeroFigure>
@@ -61,7 +60,7 @@ const ProgramLanding = () => {
                                 <div>
                                     <S.LangTitle>
                                         Español
-                                        <S.TagBadge isSecondary>
+                                        <S.TagBadge $isSecondary={true}>
                                             Culto Principal
                                         </S.TagBadge>
                                     </S.LangTitle>
@@ -101,7 +100,7 @@ const ProgramLanding = () => {
                                         </S.TagBadge>
                                     </S.LangTitle>
                                     <S.LangDescription translate="no">
-                                        Digital Order of Worship &amp; notes.
+                                        See order of worship &amp; notes
                                     </S.LangDescription>
                                 </div>
                             </S.LanguageInfo>

@@ -15,6 +15,13 @@ const Footer = () => {
                 América Latina, 1960. Derechos renovados 1988, Sociedades
                 Bíblicas Unidas. Utilizado con permiso.
             </S.Copyright>
+
+            <S.Copyright>
+                Scripture quotations are from The ESV® Bible (The Holy Bible,
+                English Standard Version®), © 2001 by Crossway, a publishing
+                ministry of Good News Publishers. Used by permission. All rights
+                reserved.
+            </S.Copyright>
         </S.Footer>
     );
 };

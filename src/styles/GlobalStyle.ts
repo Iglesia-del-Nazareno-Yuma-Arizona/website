@@ -36,4 +36,19 @@ body {
     min-width: 100vw;
     min-height: 100vh;
 }
+
+.reveal {
+    opacity: 0;
+    transition: all 0.5s ease-out;
+    pointer-event: none;
+}
+
+.reveal-up {
+    transform: translateY(30px);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: none;
+}
 `;

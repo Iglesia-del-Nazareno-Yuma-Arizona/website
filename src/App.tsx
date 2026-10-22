@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import ProgramLanding from "./pages/ProgramLanding";
 import Program from "./pages/Program";
 import Home from "./pages/Home";
+import { useReveal } from "./hooks/useReveal";
 
 const Wrapper = ({ children }: PropsWithChildren) => {
     const location = useLocation();
@@ -18,6 +19,7 @@ const Wrapper = ({ children }: PropsWithChildren) => {
 };
 
 function App() {
+    useReveal();
     return (
         <Wrapper>
             <Header />

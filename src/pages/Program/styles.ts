@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { borderRadius, color } from "../../styles/theme";
 import { Link } from "react-router-dom";
+import { divRow } from "../../styles/mixins";
 
 // --- Layout & Container ---
 
@@ -28,11 +29,12 @@ export const BackBadgeLink = styled(Link)`
     justify-content: space-between;
     padding: 0.5rem 0.75rem;
     border-radius: ${borderRadius("full")};
+    border: 2px solid rgb(70, 70, 74);
     background-color: ${color("surfaceContainerLow")};
     margin-bottom: 1.25rem;
-    font-size: 0.75rem;
+    font-size: 1rem;
     color: ${color("onSurfaceVariant")};
-    transition: all 0.15s ease;
+    transition: all 1s ease;
     align-self: flex-start;
 
     @media (hover: hover) {
@@ -56,6 +58,7 @@ export const BackIcon = styled.span.attrs({
     className: "material-symbols-outlined",
 })`
     font-size: 0.875rem;
+    font-weight: 600;
     color: ${color("secondary")};
     transition: transform 0.15s ease;
 `;
@@ -138,8 +141,8 @@ export const SectionHeaderTitle = styled.div`
 `;
 
 export const SectionSubLabel = styled.span`
-    font-size: 13px;
-    font-weigth: 600;
+    font-size: 14px;
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: ${color("secondary")};
@@ -177,7 +180,7 @@ export const TimelineItem = styled.li`
 `;
 
 export const TimelineDot = styled.div<{
-    variant?: "default" | "secondary" | "primary";
+    $variant?: "default" | "secondary" | "primary";
 }>`
     position: absolute;
     left: -31px;
@@ -185,20 +188,20 @@ export const TimelineDot = styled.div<{
     width: 0.875rem;
     height: 0.875rem;
     border-radius: ${borderRadius("full")};
-    background-color: ${({ variant, theme }) =>
-        variant === "primary"
+    background-color: ${({ $variant, theme }) =>
+        $variant === "primary"
             ? theme.colors.primary
-            : variant === "secondary"
+            : $variant === "secondary"
               ? theme.colors.secondary
               : theme.colors.surfaceContainerHigh};
     border: 2px solit ${color("surface")};
 
-    ${({ variant, theme }) =>
-        variant === "secondary" &&
+    ${({ $variant, theme }) =>
+        $variant === "secondary" &&
         `box-shadow: 0 0 0 2px ${theme.colors.secondaryContainer};`}
 
-    ${({ variant, theme }) =>
-        variant === "primary" &&
+    ${({ $variant, theme }) =>
+        $variant === "primary" &&
         `box-shadow: 0 0 0 2px ${theme.colors.primaryFixed};`}
 `;
 
@@ -233,15 +236,15 @@ export const LiturgyCategory = styled.span`
 `;
 
 export const HighlightBadge = styled.span<{
-    variant?: "secondary" | "primary";
+    $variant?: "secondary" | "primary";
 }>`
     pading: 0.125rem 0.5rem;
-    background-color: ${({ variant, theme }) =>
-        variant === "primary"
+    background-color: ${({ $variant, theme }) =>
+        $variant === "primary"
             ? theme.colors.primary
             : "rgba(113, 91, 38, 0.15)"};
-    color: ${({ variant, theme }) =>
-        variant === "primary"
+    color: ${({ $variant, theme }) =>
+        $variant === "primary"
             ? theme.colors.onPrimary
             : theme.colors.secondary};
     border-radius: ${borderRadius("full")};
@@ -259,6 +262,8 @@ export const CardTitleRow = styled.div`
 `;
 
 export const ScriptureReference = styled.span`
+    display: block;
+    margintop: 0.125rem;
     font-size: 0.75rem;
     font-weight: 600;
     color: ${color("secondary")};
@@ -311,10 +316,7 @@ export const SongListGroup = styled.div`
 `;
 
 export const SongRow = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
+    ${divRow};
 
     .music-icon {
         font-size: 0.875rem;
@@ -329,6 +331,10 @@ export const SongRow = styled.div`
     span.divider {
         color: ${color("outline")};
     }
+`;
+
+export const DivRow = styled.div`
+    ${divRow};
 `;
 
 export const GreetingTimeTag = styled.p`
@@ -347,6 +353,7 @@ export const ReflectionBox = styled.div`
     color: ${color("onSurfaceVariant")};
 
     p {
+        line-height: 1.75rem;
         margin: 0;
     }
 `;

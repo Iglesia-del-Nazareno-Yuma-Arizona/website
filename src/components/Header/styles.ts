@@ -5,9 +5,9 @@ export const Header = styled.header`
     position: sticky;
     top: 0;
     z-index: 50;
-    background-color: rgba(253, 248, 248, 0.95);
-    backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(199, 198, 202, 0.4);
+    backdrop-filter: blur(40px);
+    background-color: rgba(253, 248, 248, 0.8);
+    border-bottom: 1px solid ${color("borderOutline")};
     padding: 0 1.25rem;
     height: 4rem;
     display: flex;
@@ -36,6 +36,7 @@ export const BrandLink = styled.a`
     }
 `;
 
+// material icons church icon
 export const IconWrapper = styled.span`
     width: 2rem;
     height: 2rem;
@@ -51,6 +52,12 @@ export const IconWrapper = styled.span`
 
 export const ChurchIcon = styled.span`
     font-size: 20px;
+`;
+
+// Church of the Nazarene Logo
+
+export const Logo = styled.svg`
+    width: 2rem;
 `;
 
 export const BrandText = styled.div`

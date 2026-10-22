@@ -26,7 +26,7 @@ export const es = {
             },
             {
                 n: 2,
-                text: "Servid a Jehová con alegría;Venid ante su presencia con regocijo.",
+                text: "Servid a Jehová con alegría; Venid ante su presencia con regocijo.",
             },
             {
                 n: 3,
