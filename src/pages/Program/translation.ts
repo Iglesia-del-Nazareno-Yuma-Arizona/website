@@ -1,11 +1,16 @@
 export const es = {
     backButton: "Go back to language selection",
 
+    tribute: {
+        badgeText: "homenaje & gratitud",
+        alt: "Foto del pastor Francisco y Rebeca",
+        caption:
+            "Reconocimiento al trabajo pastoral: Pbro. José Francisco y Rebeca Rodríguez 2004-2026",
+    },
+
     mainHeading: "Programa del Culto Dominical",
 
     pastor: "Roberto Rodríguez Albavera, Pastor",
-
-    date: "es-US",
 
     liturgy: "liturgia dominical",
 
@@ -18,27 +23,63 @@ export const es = {
 
     reading: {
         title: "Lectura Bíblica",
-        reference: "Salmos 100",
+        reference: "Apocalipsis 5:1–14",
         verses: [
             {
                 n: 1,
-                text: "Cantad alegres a Dios, habitantes de toda la tierra.",
+                text: "Y vi en la mano derecha del que estaba sentado en el trono un libro escrito por dentro y por fuera, sellado con siete sellos.",
             },
             {
                 n: 2,
-                text: "Servid a Jehová con alegría; Venid ante su presencia con regocijo.",
+                text: "Y vi a un ángel fuerte que pregonaba a gran voz: ¿Quién es digno de abrir el libro y desatar sus sellos?",
             },
             {
                 n: 3,
-                text: "Reconoced que Jehová es Dios;nos hizo, y no nosotros a nosotros mismos; Pueblo suyo somos, y ovejas de su prado.",
+                text: "Y ninguno, ni en el cielo ni en la tierra ni debajo de la tierra, podía abrir el libro, ni aun mirarlo.",
             },
             {
                 n: 4,
-                text: "Entrad por sus puertas con acción de gracias, Por sus atrios con alabanza; Alabadle, bendecid su nombre.",
+                text: "Y lloraba yo mucho, porque no se había hallado a ninguno digno de abrir el libro, ni de leerlo, ni de mirarlo. ",
             },
             {
                 n: 5,
-                text: "Porque Jehová es bueno; para siempre es su misericordia,Y su verdad por todas las generaciones.",
+                text: "Y uno de los ancianos me dijo: No llores. He aquí que el León de la tribu de Judá, la raíz de David, ha vencido para abrir el libro y desatar sus siete sellos.",
+            },
+            {
+                n: 6,
+                text: "Y miré, y vi que en medio del trono y de los cuatro seres vivientes, y en medio de los ancianos, estaba en pie un Cordero como inmolado, que tenía siete cuernos, y siete ojos, los cuales son los siete espíritus de Dios enviados por toda la tierra.",
+            },
+            {
+                n: 7,
+                text: "Y vino, y tomó el libro de la mano derecha del que estaba sentado en el trono. ",
+            },
+            {
+                n: 8,
+                text: "Y cuando hubo tomado el libro, los cuatro seres vivientes y los veinticuatro ancianos se postraron delante del Cordero; todos tenían arpas, y copas de oro llenas de incienso, que son las oraciones de los santos; ",
+            },
+            {
+                n: 9,
+                text: "y cantaban un nuevo cántico, diciendo: Digno eres de tomar el libro y de abrir sus sellos; porque tú fuiste inmolado, y con tu sangre nos has redimido para Dios, de todo linaje y lengua y pueblo y nación; ",
+            },
+            {
+                n: 10,
+                text: "y nos has hecho para nuestro Dios reyes y sacerdotes, y reinaremos sobre la tierra.",
+            },
+            {
+                n: 11,
+                text: " Y miré, y oí la voz de muchos ángeles alrededor del trono, y de los seres vivientes, y de los ancianos; y su número era millones de millones,",
+            },
+            {
+                n: 12,
+                text: "que decían a gran voz: El Cordero que fue inmolado es digno de tomar el poder, las riquezas, la sabiduría, la fortaleza, la honra, la gloria y la alabanza. ",
+            },
+            {
+                n: 13,
+                text: "Y a todo lo creado que está en el cielo, y sobre la tierra, y debajo de la tierra, y en el mar, y a todas las cosas que en ellos hay, oí decir: Al que está sentado en el trono, y al Cordero, sea la alabanza, la honra, la gloria y el poder, por los siglos de los siglos. ",
+            },
+            {
+                n: 14,
+                text: "Los cuatro seres vivientes decían: Amén; y los veinticuatro ancianos se postraron sobre sus rostros y adoraron al que vive por los siglos de los siglos.",
             },
         ],
     },
@@ -61,37 +102,40 @@ export const es = {
         subtitle: "Motivos y peticiones de oración.",
     },
 
-    video: "Reforma Protestante",
-
     offering: {
         title: "Presentación de Diezmos y ofrendas",
-        subtitle: "Deuteronomio 16:16–17",
-        verses: "16 Tres veces cada año aparecerá todo varón tuyo delante de Jehová tu Dios en el lugar que él escogiere: en la fiesta solemne de los panes sin levadura, y en la fiesta solemne de las semanas, y en la fiesta solemne de los tabernáculos. Y ninguno se presentará delante de Jehová con las manos vacías; 17 cada uno con la ofrenda de su mano, conforme a la bendición que Jehová tu Dios te hubiere dado.",
+        subtitle: "Salmo 96:7–8",
+        verses: "7 Tributad a Jehová, oh familias de los pueblos, Dad a Jehová la gloria y el poder. 8 Dad a Jehová la honra debida a su nombre; Traed ofrendas, y venid a sus atrios.",
         parishioner: "Oración por las ofrendas: hno. Pérez",
     },
 
     reflection: {
         title: "meditación pastoral",
-        text: "¿Has recibido bendiciones de Dios? ¿Cuántas cosas has recibido de su parte en esta semana? ¿Por ejemplo, has tenido salud, algo de comida y un techo sobre tu cabeza? Recuerda hoy las bondades que has recibido de Dios y verás cómo fluirá de tu corazón la gratitud y te será más fácil ofrendar. Este versículo de Deuteronomio dice que debemos ofrendar según Dios nos haya bendecido. Por eso, sea que recibiste mucho o poco, siempre hay algo que puedes traer ante el Señor. Enfócate en lo que has recibido del Señor y trae tu ofrenda con un corazón agradecido.",
+        text: "Nuestro Dios es el Dios de gloria y poder. En realidad, Él no necesita nada de lo que traemos, pero al nosotros ofrendar reconocemos su grandeza y nuestra dependencia constante de Él. Ofrendamos de lo que Él nos ha dado, y lo traemos con reverencia, recordando su grandeza y su provisión fiel que hemos recibido de su Mano. A través de nuestras ofrendas adoramos y glorificamos a Dios. Dios merece toda nuestra alabanza y gratitud, algo que podemos expresarle con nuestras palabras, nuestro canto, nuestras actitudes, y también con nuestras ofrendas. Ofrendamos hoy a Dios como un acto de adoración y alabanza y lo hacemos de todo corazón.",
     },
 
     doxology: {
         tag: "mensaje & doxología",
         title: "Sermón y Bendición Pastoral",
         subtitle: "Roberto Rodríguez Albavera, Pastor",
-        titleText: "doxología de bendición • hebreos 13:20–21",
-        text: "«Y el Dios de paz que resucitó de los muertos a nuestro Señor Jesucristo, el gran pastor de las ovejas, por la sangre del pacto eterno, 21 os haga aptos en toda obra buena para que hagáis su voluntad, haciendo él en vosotros lo que es agradable delante de él por Jesucristo; al cual sea la gloria por los siglos de los siglos. Amén.",
+        titleText: "doxología de bendición • judas 24–25",
+        text: "«24 Y a aquel que es poderoso para guardaros sin caída, y presentaros sin mancha delante de su gloria con gran alegría, 25 al único y sabio Dios, nuestro Salvador, sea gloria y majestad, imperio y potencia, ahora y por todos los siglos. Amén.»",
     },
 };
 
 export const en = {
     backButton: "Volver a la selección de idioma",
 
+    tribute: {
+        badgeText: "tribute & gratitude",
+        alt: "Pastor Francisco's and Rebeca's picture",
+        caption:
+            "Recognition for Pastoral Work: Rev. José Francisco and Rebeca Rodríguez, 2004–2026",
+    },
+
     mainHeading: "Sunday Service Program",
 
     pastor: "Pastor Roberto Rodríguez Albavera",
-
-    date: "en-US",
 
     liturgy: "Sunday Liturgy",
 
@@ -104,26 +148,64 @@ export const en = {
 
     reading: {
         title: "Bible Reading",
-        reference: "Psalm 100",
+        reference: "Revelation 5:1–14",
         verses: [
-            { n: 1, text: "Make a joyful noise to the Lord, all the earth!" },
+            {
+                n: 1,
+                text: "Then I saw in the right hand of him who was seated on the throne a scroll written within and on the back, sealed with seven seals. ",
+            },
             {
                 n: 2,
-                text: "Serve the Lord with gladness! Come into his presence with singing!",
+                text: "And I saw a mighty angel proclaiming with a loud voice, “Who is worthy to open the scroll and break its seals?”",
             },
             {
                 n: 3,
-                text: "Know that the Lord, he is God! It is he who made us, and we are his; we are his people, and the sheep of his pasture.",
+                text: "And no one in heaven or on earth or under the earth was able to open the scroll or to look into it,",
             },
             {
                 n: 4,
-                text: "Enter his gates with thanksgiving, and his courts with praise!, Give thanks to him; bless his name!",
+                text: "and I began to weep loudly because no one was found worthy to open the scroll or to look into it.",
             },
             {
                 n: 5,
-                text: "For the Lord is good; his steadfast love endures forever, and his faithfulness to all generations.",
+                text: "And one of the elders said to me, “Weep no more; behold, the Lion of the tribe of Judah, the Root of David, has conquered, so that he can open the scroll and its seven seals.”",
             },
-            ,
+            {
+                n: 6,
+                text: "And between the throne and the four living creatures and among the elders I saw a Lamb standing, as though it had been slain, with seven horns and with seven eyes, which are the seven spirits of God sent out into all the earth.",
+            },
+            {
+                n: 7,
+                text: "And he went and took the scroll from the right hand of him who was seated on the throne.",
+            },
+            {
+                n: 8,
+                text: "And when he had taken the scroll, the four living creatures and the twenty-four elders fell down before the Lamb, each holding a harp, and golden bowls full of incense, which are the prayers of the saints.",
+            },
+            {
+                n: 9,
+                text: "And they sang a new song, saying, “Worthy are you to take the scroll and to open its seals, for you were slain, and by your blood you ransomed people for God from every tribe and language and people and nation,",
+            },
+            {
+                n: 10,
+                text: "and you have made them a kingdom and priests to our God, and they shall reign on the earth.”",
+            },
+            {
+                n: 11,
+                text: "Then I looked, and I heard around the throne and the living creatures and the elders the voice of many angels, numbering myriads of myriads and thousands of thousands,",
+            },
+            {
+                n: 12,
+                text: "aying with a loud voice, “Worthy is the Lamb who was slain, to receive power and wealth and wisdom and might and honor and glory and blessing!”",
+            },
+            {
+                n: 13,
+                text: "And I heard every creature in heaven and on earth and under the earth and in the sea, and all that is in them, saying, “To him who sits on the throne and to the Lamb be blessing and honor and glory and might forever and ever!”",
+            },
+            {
+                n: 14,
+                text: "And the four living creatures said, “Amen!” and the elders fell down and worshiped.",
+            },
         ],
     },
 
@@ -145,25 +227,23 @@ export const en = {
         subtitle: "Prayer requests and motives.",
     },
 
-    video: "Protestant Reformation",
-
     offering: {
         title: "Tithes and Offerings",
-        subtitle: "Deuteronomy 16:16–17",
-        verses: "16 Three times a year all your males shall appear before the Lord your God at the place that he will choose: at the Feast of Unleavened Bread, at the Feast of Weeks, and at the Feast of Booths. They shall not appear before the Lord empty-handed. 17 Every man shall give as he is able, according to the blessing of the Lord your God that he has given you.",
-        parishioner: "Prayer over the offerings: Brother Pérez",
+        subtitle: "Psalm 96:7–8",
+        verses: "7 Ascribe to the Lord, O families of the peoples, ascribe to the Lord glory and strength! 8 Ascribe to the Lord the glory due his name; bring an offering, and come into his courts!",
+        parishioner: "",
     },
 
     reflection: {
         title: "pastoral reflection",
-        text: "Have you received blessings from God? How many things have you received from Him this week? For example, have you had good health, some food, and a roof over your head? Remember today the blessings you’ve received from God, and you’ll see how gratitude will flow from your heart, making it easier for you to give. This verse from Deuteronomy says that we should give offerings according to how God has blessed us. So, whether you’ve received a lot or a little, there’s always something you can bring before the Lord. Focus on what you’ve received from the Lord and bring your offering with a grateful heart.",
+        text: "Our God is the God of glory and power. In reality, He does not need anything we bring, but when we give offerings, we acknowledge His greatness and our constant dependence on Him. Let us give from what He has given us, and let us bring it with reverence, remembering His greatness and the faithful provision we have received from His Hand. Through our offerings, we worship and glorify God. God deserves all our praise and gratitude, which we can express to Him through our words, our singing, our attitudes, and also through our offerings. Let us offer to God today as an act of worship and praise, and let us do so with all our hearts.",
     },
 
     doxology: {
         tag: "message & doxology",
         title: "Sermon and Pastoral Blessing",
         subtitle: "Pastor Roberto Rodríguez Albavera",
-        titleText: "doxology of blessing • hebrews 13:20–21",
-        text: "«Now may the God of peace who brought again from the dead our Lord Jesus, the great shepherd of the sheep, by the blood of the eternal covenant, 21 equip you with everything good that you may do his will, working in us that which is pleasing in his sight, through Jesus Christ, to whom be glory forever and ever. Amen.»",
+        titleText: "doxology of blessing • Jude 24–25",
+        text: "«24 Now to him who is able to keep you from stumbling and to present you blameless before the presence of his glory with great joy, 25 to the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority, before all time[a] and now and forever. Amen.»",
     },
 };

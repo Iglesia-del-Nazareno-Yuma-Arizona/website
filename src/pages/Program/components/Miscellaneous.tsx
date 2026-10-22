@@ -35,3 +35,13 @@ const Miscellaneous = ({
 );
 
 export default Miscellaneous;
+
+/* And this can be used in the following way o
+ *
+ * 
+    <Miscellaneous
+     icon="movie"
+     title="Video"
+     text={t("video")}
+    />
+*/

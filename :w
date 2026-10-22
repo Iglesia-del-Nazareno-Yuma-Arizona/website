@@ -1,0 +1,35 @@
+import LiturgyItem from "./LiturgyItem";
+import { Fragment } from "react";
+import * as S from "../styles";
+
+type SongProps = {
+    number: string;
+    label: string;
+    titles: string[];
+    note?: string;
+};
+
+const Song = ({ number, label, titles, note }: SongProps) => (
+    <LiturgyItem number={number} category="Adoración / Praise">
+        <S.LiturgyTitle>{label}</S.LiturgyTitle>
+
+        <S.SongListGroup>
+            <S.SongRow>
+                <span className="material-symbols-outlined" translate="no">
+                    music_note
+                </span>
+
+                {titles.map((title, i) => (
+                    <Fragment key={title}>
+                        {i > 0 && <span className="divider">&amp;</span>}
+                        <strong>«{title}»</strong>
+                    </Fragment>
+                ))}
+            </S.SongRow>
+
+            {note && <S.GreetingTimeTag>{note}</S.GreetingTimeTag>}
+        </S.SongListGroup>
+    </LiturgyItem>
+);
+
+export default Song;

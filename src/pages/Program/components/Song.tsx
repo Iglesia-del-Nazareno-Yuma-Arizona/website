@@ -21,13 +21,13 @@ const Song = ({ number, label, titles, note }: SongProps) => (
 
                 {titles.map((title, i) => (
                     <Fragment key={title}>
-                        {i > 0 && <span className="divider">&amp;</span>}
-                        <strong>«{title}»</strong>
+                        {i > 0 && <span className="divider"> | </span>}
+                        <strong>«{title}»</strong>{" "}
                     </Fragment>
                 ))}
-
-                {note && <S.GreetingTimeTag>{note}</S.GreetingTimeTag>}
             </S.SongRow>
+
+            {note && <S.GreetingTimeTag>{note}</S.GreetingTimeTag>}
         </S.SongListGroup>
     </LiturgyItem>
 );
