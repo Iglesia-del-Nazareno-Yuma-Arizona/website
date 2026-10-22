@@ -55,6 +55,7 @@ export const theme = {
         borderHairline: "#E5E5EA",
         goldWarm: "#AA9055",
         goldSoft: "#F6F3EB",
+        borderOutline: "rgba(199, 198, 202, 0.4)",
     },
 
     borderRadius: {

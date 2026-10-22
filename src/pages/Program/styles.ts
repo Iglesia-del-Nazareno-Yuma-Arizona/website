@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { borderRadius, color } from "../../styles/theme";
 import { Link } from "react-router-dom";
+import { divRow } from "../../styles/mixins";
 
 // --- Layout & Container ---
 
@@ -179,7 +180,7 @@ export const TimelineItem = styled.li`
 `;
 
 export const TimelineDot = styled.div<{
-    variant?: "default" | "secondary" | "primary";
+    $variant?: "default" | "secondary" | "primary";
 }>`
     position: absolute;
     left: -31px;
@@ -187,20 +188,20 @@ export const TimelineDot = styled.div<{
     width: 0.875rem;
     height: 0.875rem;
     border-radius: ${borderRadius("full")};
-    background-color: ${({ variant, theme }) =>
-        variant === "primary"
+    background-color: ${({ $variant, theme }) =>
+        $variant === "primary"
             ? theme.colors.primary
-            : variant === "secondary"
+            : $variant === "secondary"
               ? theme.colors.secondary
               : theme.colors.surfaceContainerHigh};
     border: 2px solit ${color("surface")};
 
-    ${({ variant, theme }) =>
-        variant === "secondary" &&
+    ${({ $variant, theme }) =>
+        $variant === "secondary" &&
         `box-shadow: 0 0 0 2px ${theme.colors.secondaryContainer};`}
 
-    ${({ variant, theme }) =>
-        variant === "primary" &&
+    ${({ $variant, theme }) =>
+        $variant === "primary" &&
         `box-shadow: 0 0 0 2px ${theme.colors.primaryFixed};`}
 `;
 
@@ -235,15 +236,15 @@ export const LiturgyCategory = styled.span`
 `;
 
 export const HighlightBadge = styled.span<{
-    variant?: "secondary" | "primary";
+    $variant?: "secondary" | "primary";
 }>`
     pading: 0.125rem 0.5rem;
-    background-color: ${({ variant, theme }) =>
-        variant === "primary"
+    background-color: ${({ $variant, theme }) =>
+        $variant === "primary"
             ? theme.colors.primary
             : "rgba(113, 91, 38, 0.15)"};
-    color: ${({ variant, theme }) =>
-        variant === "primary"
+    color: ${({ $variant, theme }) =>
+        $variant === "primary"
             ? theme.colors.onPrimary
             : theme.colors.secondary};
     border-radius: ${borderRadius("full")};
@@ -261,6 +262,8 @@ export const CardTitleRow = styled.div`
 `;
 
 export const ScriptureReference = styled.span`
+    display: block;
+    margintop: 0.125rem;
     font-size: 0.75rem;
     font-weight: 600;
     color: ${color("secondary")};
@@ -313,10 +316,7 @@ export const SongListGroup = styled.div`
 `;
 
 export const SongRow = styled.div`
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    font-size: 0.9rem;
+    ${divRow};
 
     .music-icon {
         font-size: 0.875rem;
@@ -331,6 +331,10 @@ export const SongRow = styled.div`
     span.divider {
         color: ${color("outline")};
     }
+`;
+
+export const DivRow = styled.div`
+    ${divRow};
 `;
 
 export const GreetingTimeTag = styled.p`

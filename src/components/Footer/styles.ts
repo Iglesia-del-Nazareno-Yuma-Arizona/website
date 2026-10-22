@@ -3,9 +3,9 @@ import { color } from "../../styles/theme";
 
 export const Footer = styled.footer`
     margin-top: auto;
-    padding: 1rem;
+    padding: 1rem 1rem 2rem;
     text-align: center;
-    border-top: 1px solid rgba(199, 198, 202, 0.2);
+    border-top: 1px solid ${color("borderOutline")};
 `;
 
 export const Address = styled.address`
@@ -16,14 +16,14 @@ export const Address = styled.address`
 `;
 
 export const FooterTitle = styled.p`
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: ${color("onSurface")};
     margin: 0;
 `;
 
 export const FooterSubtitle = styled.p`
-    font-size: 12px;
+    font-size: 14px;
     color: ${color("onPrimaryContainer")};
     maring: 0.125rem 0 0 0;
 

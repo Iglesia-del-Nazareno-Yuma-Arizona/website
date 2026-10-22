@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 export const PageWrapper = styled.div`
     min-height: max(884px, 100dvh);
-    background-color: ${color("background")};
+    /* background-color: rgba(253, 248, 248, 0.95); */
     color: ${color("onBackground")};
     displaly: flex;
     flex-direction: column;

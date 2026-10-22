@@ -7,7 +7,7 @@ const ProgramLanding = () => {
     const { i18n } = useTranslation();
 
     return (
-        <S.PageWrapper>
+        <S.PageWrapper className="reveal reveal-up">
             <S.MainContainer>
                 <S.DateBadge>
                     <S.DateBadgeContent>
@@ -100,7 +100,7 @@ const ProgramLanding = () => {
                                         </S.TagBadge>
                                     </S.LangTitle>
                                     <S.LangDescription translate="no">
-                                        See order of worship &amp; notes.
+                                        See order of worship &amp; notes
                                     </S.LangDescription>
                                 </div>
                             </S.LanguageInfo>
