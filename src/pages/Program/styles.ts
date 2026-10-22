@@ -270,8 +270,7 @@ export const ScriptureReference = styled.span`
 `;
 
 export const LiturgyTitle = styled.h3`
-    font-size: 0.875rem;
-    font-weight: 600;
+    font-size: 1.2rem;
     color: ${color("onSurface")};
 `;
 
@@ -300,6 +299,7 @@ export const ScriptureBox = styled.div`
     gap: 0.375rem;
 
     p {
+        font-size: 1.2rem;
         margin: 0;
     }
 
@@ -353,7 +353,8 @@ export const ReflectionBox = styled.div`
     color: ${color("onSurfaceVariant")};
 
     p {
-        line-height: 1.75rem;
+        font-size: 1.25rem;
+        line-height: 1.8rem;
         margin: 0;
     }
 `;
@@ -398,11 +399,15 @@ export const DoxologyBox = styled.div`
 
     blockquote {
         margin: 0;
-        font-size: 1rem;
+        font-size: 1.2rem;
         font-style: italic;
         color: ${color("onSurface")};
         line-height: 1.6;
     }
+`;
+
+export const DoxologyHeadingContainer = styled.div`
+    margin-top: 0.5rem;
 `;
 
 export const DoxologyTitle = styled.span`
@@ -412,4 +417,65 @@ export const DoxologyTitle = styled.span`
     letter-spacing: 0.1em;
     color: ${color("secondary")};
     display: block;
+`;
+
+/* --- Styles for Tribute card for Sunday 10/25/2026 (can be deleted afterwards) --- */
+
+export const TributeCard = styled.section`
+    padding: 1.25rem;
+    border-radius: ${borderRadius("lg")};
+    background-color: ${color("surfaceContainerLowest")};
+    border: 1px solid rgba(199, 198, 202, 0.3);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.875rem;
+    text-align: center;
+    margin: 2rem 0;
+`;
+
+export const Badge = styled.div`
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.125rem 0.75rem;
+    border-radius: ${borderRadius("full")};
+    background-color: rgba(113, 91, 38, 0.15);
+    color: ${color("secondary")};
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+
+    .badge-icon {
+        font-size: 0.875rem;
+        color: ${color("secondary")};
+    }
+`;
+
+export const ImageWrapper = styled.div`
+    overflow: hidden;
+    border-radius: 0.75rem;
+    border: 1px sollid rgba(199, 198, 202, 0.3);
+    max-width: 20rem;
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+`;
+
+export const TributeImage = styled.img`
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+`;
+
+export const TributeCaption = styled.p`
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: ${color("onSurface")};
+    line-height: 1.625;
+    max-width: 20rem;
+    margin: 0;
+    padding-top: 0.25rem;
 `;

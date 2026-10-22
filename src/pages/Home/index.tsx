@@ -1,6 +1,9 @@
 import * as S from "./styles";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 const Home = () => {
+    useDocumentTitle("Inicio");
+
     return (
         <S.WorkInProgressContainer className="reveal reveal-up">
             {/* Large Worker Graphic */}

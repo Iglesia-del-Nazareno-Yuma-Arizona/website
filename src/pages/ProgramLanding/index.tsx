@@ -2,8 +2,10 @@ import * as S from "./styles";
 import { formatDate } from "../../utils/date";
 import { useTranslation } from "react-i18next";
 import church from "../../assets/IDN-front.webp";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
 
 const ProgramLanding = () => {
+    useDocumentTitle("Programa - Idioma");
     const { i18n } = useTranslation();
 
     return (

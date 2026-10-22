@@ -3,13 +3,15 @@ import * as S from "./styles";
 import { useTranslation } from "react-i18next";
 import type { Verse } from "./components/BibleReading";
 import BibleReading from "./components/BibleReading";
-import Miscellaneous from "./components/Miscellaneous";
 import ProgramItem from "./components/ProgramItem";
 import Song from "./components/Song";
 import Offering from "./components/Offering";
 import Doxology from "./components/Doxology";
+import { useDocumentTitle } from "../../hooks/useDocumentTitle";
+import TributeSection from "./components/Card";
 
 const Program = () => {
+    useDocumentTitle("Programa - Orden del Culto");
     const { t, i18n } = useTranslation("program");
 
     const verses = t("reading.verses", { returnObjects: true }) as Verse[];
@@ -50,6 +52,13 @@ const Program = () => {
                 </S.MetadataHeader>
             </S.MetadataSection>
 
+            <TributeSection
+                badgeText={t("tribute.badgeText")}
+                imageAlt={t("tribute.alt")}
+                imageSrc="https://lh3.googleusercontent.com/d/1igTlXvmFJTpKhG0Bwqt_lamdxW2-Y5IA"
+                caption={t("tribute.caption")}
+            />
+
             {/* Section: Order of Worship */}
             <S.SectionWrapper>
                 <S.SectionHeader>
@@ -83,7 +92,11 @@ const Program = () => {
                     <Song
                         number="03"
                         label={t("worship.title1")}
-                        titles={["Por siempre", "Por fe"]}
+                        titles={[
+                            "Al que es Digno",
+                            "Loores dad a Cristo el Rey",
+                        ]}
+                        note={t("greeting")}
                     />
 
                     {/* Testimonials */}
@@ -103,41 +116,29 @@ const Program = () => {
                         text={t("prayer.subtitle")}
                     />
 
-                    {/* Video */}
-                    <Miscellaneous
-                        icon="movie"
-                        title="Video"
-                        text={t("video")}
-                    />
-
-                    {/* Coro */}
-                    <Song
-                        number="06"
-                        label={t("worship.title2")}
-                        titles={["Señor Mi Redentor y Roca"]}
-                    />
-
                     {/* Offerings & Tithes */}
                     <Offering
-                        number="07"
+                        number="06"
                         title={t("offering.title")}
                         reference={t("offering.subtitle")}
                         verses={t("offering.verses")}
                         reflectionTitle={t("reflection.title")}
                         text={t("reflection.text")}
-                        note={t("offering.parishioner")}
                     />
 
                     {/* Song */}
                     <Song
-                        number="08"
-                        label={t("worship.title2")}
-                        titles={["Corre a Cristo"]}
+                        number="07"
+                        label={t("worship.title1")}
+                        titles={[
+                            "Castillo fuerte  es nuestro Dios",
+                            "Pon tu Mirada",
+                        ]}
                     />
 
                     {/* Doxology and pastoral blessing */}
                     <Doxology
-                        number="09"
+                        number="08"
                         dot="primary"
                         badge={t("doxology.tag")}
                         title={t("doxology.title")}

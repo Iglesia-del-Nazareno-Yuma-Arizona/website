@@ -20,12 +20,12 @@ const Doxology = ({
     textTitle,
     text,
 }: DoxologyProps) => (
-    <LiturgyItem number={number} badgeVariant={dot} badge={badge}>
-        <div>
+    <LiturgyItem dot={dot} number={number} badgeVariant={dot} badge={badge}>
+        <S.DoxologyHeadingContainer>
             <S.LiturgyTitle>{title}</S.LiturgyTitle>
 
             <S.PastorSubText>{subtitle}</S.PastorSubText>
-        </div>
+        </S.DoxologyHeadingContainer>
 
         <S.DoxologyBox>
             <S.DoxologyTitle>{textTitle}</S.DoxologyTitle>
