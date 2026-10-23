@@ -5,8 +5,7 @@ export const Header = styled.header`
     position: sticky;
     top: 0;
     z-index: 50;
-    backdrop-filter: blur(40px);
-    background-color: rgba(253, 248, 248, 0.8);
+    background-color: ${color("surfaceContainerLowest")};
     border-bottom: 1px solid ${color("borderOutline")};
     padding: 0 1.25rem;
     height: 4rem;
