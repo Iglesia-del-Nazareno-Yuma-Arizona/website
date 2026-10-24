@@ -10,6 +10,8 @@ const Footer = () => {
                 </S.FooterSubtitle>
             </S.Address>
 
+            <S.Divider />
+
             <S.Copyright>
                 Texto bíblico: Reina-Valera 1960 © Sociedades Bíblicas en
                 América Latina, 1960. Derechos renovados 1988, Sociedades
