@@ -32,9 +32,16 @@ export const FooterSubtitle = styled.p`
     }
 `;
 
+export const Divider = styled.div`
+    margin: 1.5em auto;
+    max-width: 288px;
+    border-top: 1px solid ${color("borderOutline")};
+    display: flex;
+`;
+
 export const Copyright = styled.small`
     display: block;
-    font-size: 10px;
+    font-size: 11px;
     color: ${color("outlineVariant")};
     margin-top: 0.5rem;
 `;
