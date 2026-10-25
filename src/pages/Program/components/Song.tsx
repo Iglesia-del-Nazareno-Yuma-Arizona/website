@@ -21,7 +21,7 @@ const Song = ({ number, label, titles, note }: SongProps) => (
 
                 {titles.map((title, i) => (
                     <Fragment key={title}>
-                        {i > 0 && <span className="divider"> | </span>}
+                        {i > 0 && <span className="divider"> – </span>}
                         <strong>«{title}»</strong>{" "}
                     </Fragment>
                 ))}
