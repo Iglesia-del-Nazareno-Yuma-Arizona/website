@@ -317,6 +317,9 @@ export const SongListGroup = styled.div`
 
 export const SongRow = styled.div`
     ${divRow};
+    flex-direction: column; // Change 1
+    margin: 1rem 0; // Change 2
+    font-size: calc(1.15rem - (sibling-count() * 0.1rem));
 
     .music-icon {
         font-size: 0.875rem;
