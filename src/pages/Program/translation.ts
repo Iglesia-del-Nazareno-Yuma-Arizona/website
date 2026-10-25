@@ -244,6 +244,6 @@ export const en = {
         title: "Sermon and Pastoral Blessing",
         subtitle: "Pastor Roberto Rodríguez Albavera",
         titleText: "doxology of blessing • Jude 24–25",
-        text: "«24 Now to him who is able to keep you from stumbling and to present you blameless before the presence of his glory with great joy, 25 to the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority, before all time[a] and now and forever. Amen.»",
+        text: "«24 Now to him who is able to keep you from stumbling and to present you blameless before the presence of his glory with great joy, 25 to the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority, before all time and now and forever. Amen.»",
     },
 };
