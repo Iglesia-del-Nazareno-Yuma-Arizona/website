@@ -8,7 +8,8 @@ import Song from "./components/Song";
 import Offering from "./components/Offering";
 import Doxology from "./components/Doxology";
 import { useDocumentTitle } from "../../hooks/useDocumentTitle";
-import TributeSection from "./components/Card";
+import Special from "./components/Special";
+import Miscellaneous from "./components/Miscellaneous";
 
 const Program = () => {
     useDocumentTitle("Programa - Orden del Culto");
@@ -52,13 +53,6 @@ const Program = () => {
                 </S.MetadataHeader>
             </S.MetadataSection>
 
-            <TributeSection
-                badgeText={t("tribute.badgeText")}
-                imageAlt={t("tribute.alt")}
-                imageSrc="https://lh3.googleusercontent.com/d/1igTlXvmFJTpKhG0Bwqt_lamdxW2-Y5IA"
-                caption={t("tribute.caption")}
-            />
-
             {/* Section: Order of Worship */}
             <S.SectionWrapper>
                 <S.SectionHeader>
@@ -92,10 +86,7 @@ const Program = () => {
                     <Song
                         number="03"
                         label={t("worship.title1")}
-                        titles={[
-                            "Al que es Digno",
-                            "Loores dad a Cristo el Rey",
-                        ]}
+                        titles={["Hay Libertad", "Hay Poder"]}
                         note={t("greeting")}
                     />
 
@@ -132,19 +123,33 @@ const Program = () => {
                         label={t("worship.title1")}
                         titles={[
                             "Castillo fuerte  es nuestro Dios",
-                            "Pon tu Mirada",
+                            "Dame a Cristo",
                         ]}
                     />
 
                     {/* Doxology and pastoral blessing */}
                     <Doxology
                         number="08"
-                        dot="primary"
-                        badge={t("doxology.tag")}
+                        badgeVariant="primary"
+                        badge="mensaje / sermon"
                         title={t("doxology.title")}
                         subtitle={t("doxology.subtitle")}
-                        textTitle={t("doxology.titleText")}
-                        text={t("doxology.text")}
+                    />
+
+                    <Special
+                        number="9"
+                        title={t("communion.title")}
+                        doxologySubtitle={t("communion.scriptureReference")}
+                        verses={t("communion.verses")}
+                    />
+
+                    <Miscellaneous
+                        dot="primary"
+                        number="10"
+                        category="avisos / announcements"
+                        icon="campaign"
+                        title={t("announcements.title")}
+                        text={t("announcements.text")}
                     />
                 </S.TimelineContainer>
             </S.SectionWrapper>

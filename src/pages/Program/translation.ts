@@ -1,13 +1,6 @@
 export const es = {
     backButton: "Go back to language selection",
 
-    tribute: {
-        badgeText: "homenaje & gratitud",
-        alt: "Foto del pastor Francisco y Rebeca",
-        caption:
-            "Reconocimiento al trabajo pastoral: Pbro. José Francisco y Rebeca Rodríguez 2004-2026",
-    },
-
     mainHeading: "Programa del Culto Dominical",
 
     pastor: "Roberto Rodríguez Albavera, Pastor",
@@ -23,63 +16,43 @@ export const es = {
 
     reading: {
         title: "Lectura Bíblica",
-        reference: "Apocalipsis 5:1–14",
+        reference: "Efesios 2:1–9",
         verses: [
             {
                 n: 1,
-                text: "Y vi en la mano derecha del que estaba sentado en el trono un libro escrito por dentro y por fuera, sellado con siete sellos.",
+                text: "Y Él os dio vida a vosotros, cuando estabais muertos en vuestros delitos y pecados",
             },
             {
                 n: 2,
-                text: "Y vi a un ángel fuerte que pregonaba a gran voz: ¿Quién es digno de abrir el libro y desatar sus sellos?",
+                text: "en los cuales anduvisteis en otro tiempo, siguiendo la corriente de este mundo, conforme al príncipe de la potestad del aire, el espíritu que ahora opera en los hijos de desobediencia,",
             },
             {
                 n: 3,
-                text: "Y ninguno, ni en el cielo ni en la tierra ni debajo de la tierra, podía abrir el libro, ni aun mirarlo.",
+                text: "entre los cuales también todos nosotros vivimos en otro tiempo en los deseos de nuestra carne, haciendo la voluntad de la carne y de los pensamientos, y éramos por naturaleza hijos de ira, lo mismo que los demás.",
             },
             {
                 n: 4,
-                text: "Y lloraba yo mucho, porque no se había hallado a ninguno digno de abrir el libro, ni de leerlo, ni de mirarlo. ",
+                text: "Pero Dios, que es rico en misericordia, por su gran amor con que nos amó,",
             },
             {
                 n: 5,
-                text: "Y uno de los ancianos me dijo: No llores. He aquí que el León de la tribu de Judá, la raíz de David, ha vencido para abrir el libro y desatar sus siete sellos.",
+                text: "aun estando nosotros muertos en pecados, nos dio vida juntamente con Cristo (por gracia sois salvos),",
             },
             {
                 n: 6,
-                text: "Y miré, y vi que en medio del trono y de los cuatro seres vivientes, y en medio de los ancianos, estaba en pie un Cordero como inmolado, que tenía siete cuernos, y siete ojos, los cuales son los siete espíritus de Dios enviados por toda la tierra.",
+                text: "y juntamente con Él nos resucitó, y asimismo nos hizo sentar en los lugares celestiales con Cristo Jesús,",
             },
             {
                 n: 7,
-                text: "Y vino, y tomó el libro de la mano derecha del que estaba sentado en el trono. ",
+                text: "para mostrar en los siglos venideros las abundantes riquezas de su gracia en su bondad para con nosotros en Cristo Jesús.",
             },
             {
                 n: 8,
-                text: "Y cuando hubo tomado el libro, los cuatro seres vivientes y los veinticuatro ancianos se postraron delante del Cordero; todos tenían arpas, y copas de oro llenas de incienso, que son las oraciones de los santos; ",
+                text: "Porque por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios;",
             },
             {
                 n: 9,
-                text: "y cantaban un nuevo cántico, diciendo: Digno eres de tomar el libro y de abrir sus sellos; porque tú fuiste inmolado, y con tu sangre nos has redimido para Dios, de todo linaje y lengua y pueblo y nación; ",
-            },
-            {
-                n: 10,
-                text: "y nos has hecho para nuestro Dios reyes y sacerdotes, y reinaremos sobre la tierra.",
-            },
-            {
-                n: 11,
-                text: " Y miré, y oí la voz de muchos ángeles alrededor del trono, y de los seres vivientes, y de los ancianos; y su número era millones de millones,",
-            },
-            {
-                n: 12,
-                text: "que decían a gran voz: El Cordero que fue inmolado es digno de tomar el poder, las riquezas, la sabiduría, la fortaleza, la honra, la gloria y la alabanza. ",
-            },
-            {
-                n: 13,
-                text: "Y a todo lo creado que está en el cielo, y sobre la tierra, y debajo de la tierra, y en el mar, y a todas las cosas que en ellos hay, oí decir: Al que está sentado en el trono, y al Cordero, sea la alabanza, la honra, la gloria y el poder, por los siglos de los siglos. ",
-            },
-            {
-                n: 14,
-                text: "Los cuatro seres vivientes decían: Amén; y los veinticuatro ancianos se postraron sobre sus rostros y adoraron al que vive por los siglos de los siglos.",
+                text: "no por obras, para que nadie se gloríe.",
             },
         ],
     },
@@ -104,34 +77,38 @@ export const es = {
 
     offering: {
         title: "Presentación de Diezmos y ofrendas",
-        subtitle: "Salmo 96:7–8",
-        verses: "7 Tributad a Jehová, oh familias de los pueblos, Dad a Jehová la gloria y el poder. 8 Dad a Jehová la honra debida a su nombre; Traed ofrendas, y venid a sus atrios.",
-        parishioner: "Oración por las ofrendas: hno. Pérez",
+        subtitle: "Proverbios 3:9–10",
+        verses: "9 Honra a Jehová con tus bienes, Y con las primicias de todos tus frutos; 10 Y serán llenos tus graneros con abundancia, Y tus lagares rebosarán de mosto.",
+        parishioner: "",
     },
 
     reflection: {
         title: "meditación pastoral",
-        text: "Nuestro Dios es el Dios de gloria y poder. En realidad, Él no necesita nada de lo que traemos, pero al nosotros ofrendar reconocemos su grandeza y nuestra dependencia constante de Él. Ofrendamos de lo que Él nos ha dado, y lo traemos con reverencia, recordando su grandeza y su provisión fiel que hemos recibido de su Mano. A través de nuestras ofrendas adoramos y glorificamos a Dios. Dios merece toda nuestra alabanza y gratitud, algo que podemos expresarle con nuestras palabras, nuestro canto, nuestras actitudes, y también con nuestras ofrendas. Ofrendamos hoy a Dios como un acto de adoración y alabanza y lo hacemos de todo corazón.",
+        text: "Antes de ofrendar, es muy importante que examinemos nuestra actitud y motivación. ¿Le estamos dando a Dios las primicias o le estamos dando sobras? ¿Lo hacemos con un corazón lleno de gratitud o por compromiso? Más que la cantidad de lo que ofrendamos, a Dios le importa la actitud con la cual traemos nuestras ofrendas ante Él. Honramos a Dios cuando traemos ante Él los primeros frutos de nuestro trabajo y esfuerzo. Dios es quien nos suple lo que necesitamos, todo viene de  Él y Él merece que le ofrendemos lo mejor. Honremos hoy a Dios con nuestras ofrendas y con corazones llenos de gratitud y adoración por todas sus bondades.",
     },
 
     doxology: {
         tag: "mensaje & doxología",
-        title: "Sermón y Bendición Pastoral",
+        title: "Sermón",
         subtitle: "Roberto Rodríguez Albavera, Pastor",
-        titleText: "doxología de bendición • judas 24–25",
-        text: "«24 Y a aquel que es poderoso para guardaros sin caída, y presentaros sin mancha delante de su gloria con gran alegría, 25 al único y sabio Dios, nuestro Salvador, sea gloria y majestad, imperio y potencia, ahora y por todos los siglos. Amén.»",
+        titleText: "doxología de bendición • –",
+        text: "«»",
+    },
+
+    communion: {
+        title: "Santa Cena y Bendición pastoral",
+        scriptureReference: "1 Pedro 5:8-11",
+        verses: "8 Sed sobrios, y velad; porque vuestro adversario el diablo, como león rugiente, anda alrededor buscando a quien devorar; 9 al cual resistid firmes en la fe, sabiendo que los mismos padecimientos se van cumpliendo en vuestros hermanos en todo el mundo. 10 Mas el Dios de toda gracia, que nos llamó a su gloria eterna en Jesucristo, después que hayáis padecido un poco de tiempo, Él mismo os perfeccione, afirme, fortalezca y establezca. 11 A Él sea la gloria y el imperio por los siglos de los siglos. Amén.",
+    },
+
+    announcements: {
+        title: "Avisos",
+        text: "Vida de la Iglesia & Eventos",
     },
 };
 
 export const en = {
     backButton: "Volver a la selección de idioma",
-
-    tribute: {
-        badgeText: "tribute & gratitude",
-        alt: "Pastor Francisco's and Rebeca's picture",
-        caption:
-            "Recognition for Pastoral Work: Rev. José Francisco and Rebeca Rodríguez, 2004–2026",
-    },
 
     mainHeading: "Sunday Service Program",
 
@@ -148,63 +125,43 @@ export const en = {
 
     reading: {
         title: "Bible Reading",
-        reference: "Revelation 5:1–14",
+        reference: "Ephesians 2:1–9",
         verses: [
             {
                 n: 1,
-                text: "Then I saw in the right hand of him who was seated on the throne a scroll written within and on the back, sealed with seven seals. ",
+                text: "And you were dead in the trespasses and sins",
             },
             {
                 n: 2,
-                text: "And I saw a mighty angel proclaiming with a loud voice, “Who is worthy to open the scroll and break its seals?”",
+                text: "in which you once walked, following the course of this world, following the prince of the power of the air, the spirit that is now at work in the sons of disobedience—",
             },
             {
                 n: 3,
-                text: "And no one in heaven or on earth or under the earth was able to open the scroll or to look into it,",
+                text: "among whom we all once lived in the passions of our flesh, carrying out the desires of the flesh and the mind, and were by nature children of wrath, like the rest of mankind.",
             },
             {
                 n: 4,
-                text: "and I began to weep loudly because no one was found worthy to open the scroll or to look into it.",
+                text: "But God, being rich in mercy, because of the great love with which he loved us,",
             },
             {
                 n: 5,
-                text: "And one of the elders said to me, “Weep no more; behold, the Lion of the tribe of Judah, the Root of David, has conquered, so that he can open the scroll and its seven seals.”",
+                text: "even when we were dead in our trespasses, made us alive together with Christ—by grace you have been saved—",
             },
             {
                 n: 6,
-                text: "And between the throne and the four living creatures and among the elders I saw a Lamb standing, as though it had been slain, with seven horns and with seven eyes, which are the seven spirits of God sent out into all the earth.",
+                text: "and raised us up with him and seated us with him in the heavenly places in Christ Jesus,",
             },
             {
                 n: 7,
-                text: "And he went and took the scroll from the right hand of him who was seated on the throne.",
+                text: "so that in the coming ages he might show the immeasurable riches of his grace in kindness toward us in Christ Jesus.",
             },
             {
                 n: 8,
-                text: "And when he had taken the scroll, the four living creatures and the twenty-four elders fell down before the Lamb, each holding a harp, and golden bowls full of incense, which are the prayers of the saints.",
+                text: "For by grace you have been saved through faith. And this is not your own doing; it is the gift of God,",
             },
             {
                 n: 9,
-                text: "And they sang a new song, saying, “Worthy are you to take the scroll and to open its seals, for you were slain, and by your blood you ransomed people for God from every tribe and language and people and nation,",
-            },
-            {
-                n: 10,
-                text: "and you have made them a kingdom and priests to our God, and they shall reign on the earth.”",
-            },
-            {
-                n: 11,
-                text: "Then I looked, and I heard around the throne and the living creatures and the elders the voice of many angels, numbering myriads of myriads and thousands of thousands,",
-            },
-            {
-                n: 12,
-                text: "saying with a loud voice, “Worthy is the Lamb who was slain, to receive power and wealth and wisdom and might and honor and glory and blessing!”",
-            },
-            {
-                n: 13,
-                text: "And I heard every creature in heaven and on earth and under the earth and in the sea, and all that is in them, saying, “To him who sits on the throne and to the Lamb be blessing and honor and glory and might forever and ever!”",
-            },
-            {
-                n: 14,
-                text: "And the four living creatures said, “Amen!” and the elders fell down and worshiped.",
+                text: "not a result of works, so that no one may boast.",
             },
         ],
     },
@@ -229,21 +186,31 @@ export const en = {
 
     offering: {
         title: "Tithes and Offerings",
-        subtitle: "Psalm 96:7–8",
-        verses: "7 Ascribe to the Lord, O families of the peoples, ascribe to the Lord glory and strength! 8 Ascribe to the Lord the glory due his name; bring an offering, and come into his courts!",
+        subtitle: "Proverbs 3:9–10",
+        verses: "9 Honor the Lord with your wealth and with the firstfruits of all your produce; 10 then your barns will be filled with plenty, and your vats will be bursting with wine.",
         parishioner: "",
     },
 
     reflection: {
         title: "pastoral reflection",
-        text: "Our God is the God of glory and power. In reality, He does not need anything we bring, but when we give offerings, we acknowledge His greatness and our constant dependence on Him. Let us give from what He has given us, and let us bring it with reverence, remembering His greatness and the faithful provision we have received from His Hand. Through our offerings, we worship and glorify God. God deserves all our praise and gratitude, which we can express to Him through our words, our singing, our attitudes, and also through our offerings. Let us offer to God today as an act of worship and praise, and let us do so with all our hearts.",
+        text: "Before we give an offering, it is very important that we examine our attitude and motivation. Are we giving God the firstfruits, or are we giving Him leftovers? Do we do so with a heart full of gratitude, or out of obligation? More than the amount we give, God cares about the attitude with which we bring our offerings before Him. We honor God when we bring before Him the firstfruits of our labor and effort. God is the one who provides us with what we need; everything comes from Him, and He deserves the very best we have to offer. Let us honor God today with our offerings and with hearts full of gratitude and worship for all His goodness.",
     },
 
     doxology: {
         tag: "message & doxology",
-        title: "Sermon and Pastoral Blessing",
+        title: "Sermon",
         subtitle: "Pastor Roberto Rodríguez Albavera",
-        titleText: "doxology of blessing • Jude 24–25",
-        text: "«24 Now to him who is able to keep you from stumbling and to present you blameless before the presence of his glory with great joy, 25 to the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority, before all time and now and forever. Amen.»",
+        titleText: "doxology of blessing • –",
+        text: "«»",
+    },
+    communion: {
+        title: "Holy Communion and Pastoral Blessing",
+        scriptureReference: "1 Peter 5:8-11",
+        verses: "8 Be sober-minded; be watchful. Your adversary the devil prowls around like a roaring lion, seeking someone to devour. 9 Resist him, firm in your faith, knowing that the same kinds of suffering are being experienced by your brotherhood throughout the world. 10 And after you have suffered a little while, the God of all grace, who has called you to his eternal glory in Christ, will himself restore, confirm, strengthen, and establish you. 11 To him be the dominion forever and ever. Amen.",
+    },
+
+    announcements: {
+        title: "Announcements",
+        text: "Life of the Church & Events",
     },
 };
