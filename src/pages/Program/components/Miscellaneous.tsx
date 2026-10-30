@@ -7,8 +7,8 @@ type MiscellaneousProps = {
     number?: string;
     category?: string;
     icon?: string;
-    title: string;
-    text: string;
+    title?: string;
+    text?: string;
 };
 
 const Miscellaneous = ({

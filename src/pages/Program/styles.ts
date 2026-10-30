@@ -338,6 +338,10 @@ export const SongRow = styled.div`
 
 export const DivRow = styled.div`
     ${divRow};
+
+    span {
+        font-size: 1.5rem;
+    }
 `;
 
 export const GreetingTimeTag = styled.p`
