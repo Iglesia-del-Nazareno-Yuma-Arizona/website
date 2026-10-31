@@ -21,9 +21,9 @@ const Special = ({
             <S.LiturgyTitle style={{ marginBottom: ".5rem" }}>
                 {title}
             </S.LiturgyTitle>
-            <S.DoxologyTitle style={{ marginBottom: ".5rem" }}>
+            <S.ScriptureReference style={{ marginBottom: ".5rem" }}>
                 {doxologySubtitle}
-            </S.DoxologyTitle>
+            </S.ScriptureReference>
 
             <S.DoxologyBox>
                 <blockquote cite="">{verses}</blockquote>

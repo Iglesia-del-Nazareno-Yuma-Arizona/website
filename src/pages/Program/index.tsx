@@ -146,7 +146,7 @@ const Program = () => {
                     <Miscellaneous
                         dot="primary"
                         number="10"
-                        category="avisos / announcements"
+                        category="actualizaciones / updates"
                         icon="campaign"
                         title={t("announcements.title")}
                         text={t("announcements.text")}
