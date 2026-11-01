@@ -204,7 +204,7 @@ export const en = {
         text: "«»",
     },
     communion: {
-        title: "Holy Communion and Pastoral Blessing",
+        title: "Communion and Pastoral Blessing",
         scriptureReference: "1 Peter 5:8-11",
         verses: "8 Be sober-minded; be watchful. Your adversary the devil prowls around like a roaring lion, seeking someone to devour. 9 Resist him, firm in your faith, knowing that the same kinds of suffering are being experienced by your brotherhood throughout the world. 10 And after you have suffered a little while, the God of all grace, who has called you to his eternal glory in Christ, will himself restore, confirm, strengthen, and establish you. 11 To him be the dominion forever and ever. Amen.",
     },
