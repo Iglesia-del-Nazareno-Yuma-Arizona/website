@@ -3,6 +3,8 @@ import * as S from "../styles";
 
 type SpecialProps = {
     dot?: Dot;
+    badgeVariant: Dot;
+    badge?: string;
     number: string;
     title: string;
     doxologySubtitle: string;
@@ -16,7 +18,12 @@ const Special = ({
     doxologySubtitle,
     verses,
 }: SpecialProps) => (
-    <LiturgyItem dot={dot} number={number} category="Comunión / Communion">
+    <LiturgyItem
+        dot={dot}
+        number={number}
+        badgeVariant={dot}
+        badge="Comunión / Communion"
+    >
         <S.DoxologyHeadingContainer>
             <S.LiturgyTitle style={{ marginBottom: ".5rem" }}>
                 {title}
