@@ -138,6 +138,8 @@ const Program = () => {
 
                     <Special
                         number="9"
+                        badgeVariant="secondary"
+                        badge="comunión / communion"
                         title={t("communion.title")}
                         doxologySubtitle={t("communion.scriptureReference")}
                         verses={t("communion.verses")}
