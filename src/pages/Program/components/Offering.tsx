@@ -1,13 +1,15 @@
 import LiturgyItem from "./LiturgyItem";
 import * as S from "../styles";
 
+export type Paragraph = { id: number; paragraph: string };
+
 type OfferingProps = {
     number: string;
     title: string;
     reference: string;
     verses: string;
     reflectionTitle: string;
-    text: string;
+    paragraphs: Paragraph[];
     note?: string;
 };
 
@@ -17,7 +19,7 @@ const Offering = ({
     reference,
     verses,
     reflectionTitle,
-    text,
+    paragraphs,
     note,
 }: OfferingProps) => (
     <LiturgyItem number={number} category="Generosidad / Offering">
@@ -34,7 +36,10 @@ const Offering = ({
         <S.ReflectionBox>
             <S.ReflectionTitle>{reflectionTitle}</S.ReflectionTitle>
 
-            <p>{text}</p>
+            {Array.isArray(paragraphs) &&
+                paragraphs.map(({ id, paragraph }) => (
+                    <p key={id}>{paragraph}</p>
+                ))}
         </S.ReflectionBox>
 
         {note && (
