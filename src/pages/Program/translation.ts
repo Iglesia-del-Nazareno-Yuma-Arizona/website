@@ -1,216 +1,470 @@
-export const es = {
-    backButton: "Go back to language selection",
+const pickByDate = <T>(programs: Record<string, T>): T => {
+    const today = new Date().toLocaleDateString("en-CA"); // "YYYY-MM-DD"
+    const dates = Object.keys(programs).sort();
+    const key = dates.filter((d) => d <= today).pop() ?? dates[0];
 
-    mainHeading: "Programa del Culto Dominical",
+    return programs[key];
+};
 
-    pastor: "Roberto Rodríguez Albavera, Pastor",
+const esPrograms = {
+    "2026-11-08": {
+        backButton: "Go back to language selection",
 
-    liturgy: "liturgia dominical",
+        mainHeading: "Programa del Culto Dominical",
 
-    mainTitle: "Orden del Culto",
+        pastor: "Roberto Rodríguez Albavera, Pastor",
 
-    welcome: {
-        title: "Bienvenida",
-        subtitle: "Cordial saludo a la congregación y a las visitas.",
+        liturgy: "liturgia dominical",
+
+        mainTitle: "Orden del Culto",
+
+        welcome: {
+            title: "Bienvenida",
+            subtitle: "Cordial saludo a la congregación y a las visitas.",
+        },
+
+        reading: {
+            title: "Lectura Bíblica",
+            reference: "Filipenses 4:1–9",
+            verses: [
+                {
+                    n: 1,
+                    text: "Así que, hermanos míos amados y deseados, gozo y corona mía, estad así firmes en el Señor, amados.",
+                },
+                {
+                    n: 2,
+                    text: "Ruego a Evodia y a Síntique, que sean de un mismo sentir en el Señor.",
+                },
+                {
+                    n: 3,
+                    text: "Asimismo te ruego también a ti, compañero fiel, que ayudes a estas que combatieron juntamente conmigo en el evangelio, con Clemente también y los demás colaboradores míos, cuyos nombres están en el libro de la vida.",
+                },
+                {
+                    n: 4,
+                    text: "Regocijaos en el Señor siempre. Otra vez digo: ¡Regocijaos!",
+                },
+                {
+                    n: 5,
+                    text: "Vuestra gentileza sea conocida de todos los hombres. El Señor está cerca.",
+                },
+                {
+                    n: 6,
+                    text: "Por nada estéis afanosos, sino sean conocidas vuestras peticiones delante de Dios en toda oración y ruego, con acción de gracias.",
+                },
+                {
+                    n: 7,
+                    text: "Y la paz de Dios, que sobrepasa todo entendimiento, guardará vuestros corazones y vuestros pensamientos en Cristo Jesús.",
+                },
+                {
+                    n: 8,
+                    text: "Por lo demás, hermanos, todo lo que es verdadero, todo lo honesto, todo lo justo, todo lo puro, todo lo amable, todo lo que es de buen nombre; si hay virtud alguna, si algo digno de alabanza, en esto pensad.",
+                },
+                {
+                    n: 9,
+                    text: "Lo que aprendisteis y recibisteis y oísteis y visteis en mí, esto haced; y el Dios de paz estará con vosotros.",
+                },
+            ],
+        },
+
+        worship: {
+            title1: "Coros de Alabanza",
+            title2: "Coro",
+        },
+
+        greeting: "Tiempo de saludarse",
+
+        testimony: {
+            title: "Testimonios",
+            subtitle:
+                "Espacio para compartir las maravillas y fidelidad de Dios.",
+        },
+
+        prayer: {
+            intercession: "intercesión",
+            title: "Oración Pastoral",
+            subtitle: "Motivos y peticiones de oración.",
+        },
+
+        offering: {
+            title: "Presentación de Diezmos y ofrendas",
+            subtitle: "1 Corintios 16:2a",
+            verses: "Cada primer día de la semana cada uno de vosotros ponga aparte algo, según haya prosperado, guardándolo, para que cuando yo llegue no se recojan entonces ofrendas.",
+            parishioner: "",
+        },
+
+        reflection: {
+            title: "meditación pastoral",
+            paragraphs: [
+                {
+                    id: 1,
+                    paragraph:
+                        "La ofrenda no es algo que hacemos a la ligera sin meditar ante Dios. Es un acto consciente de obediencia y un acto de alabanza y adoración a Dios. Ofrendamos según lo recibido y debemos reflexionar sobre las bendiciones recibidas de parte de Dios antes de ofrendar. ",
+                },
+                {
+                    id: 2,
+                    paragraph:
+                        "Cada uno debe traer su ofrenda a la reunión semanal según haya sido prosperado. Damos conforme a lo que Dios nos ha provisto y lo hacemos con gratitud por las bendiciones que hemos recibido de su mano. Llevemos nuestras ofrendas al templo y contribuyamos al crecimiento de la obra de Dios.",
+                },
+            ],
+        },
+
+        doxology: {
+            tag: "mensaje & doxología",
+            title: "Sermón",
+            subtitle: "Roberto Rodríguez Albavera, Pastor",
+            titleText: "doxología de bendición • 1 Pedro 5:10–11",
+            text: "«10 Mas el Dios de toda gracia, que nos llamó a su gloria eterna en Jesucristo, después que hayáis padecido un poco de tiempo, él mismo os perfeccione, afirme, fortalezca y establezca. 11 A él sea la gloria y el imperio por los siglos de los siglos. Amén.»",
+        },
+
+        communion: {
+            title: "Santa Cena y Bendición pastoral",
+            scriptureReference: "",
+            verses: "",
+        },
+
+        announcements: {
+            title: "Avisos",
+            text: "Vida de la Iglesia & Eventos",
+        },
     },
 
-    reading: {
-        title: "Lectura Bíblica",
-        reference: "Efesios 2:1–9",
-        verses: [
-            {
-                n: 1,
-                text: "Y Él os dio vida a vosotros, cuando estabais muertos en vuestros delitos y pecados",
-            },
-            {
-                n: 2,
-                text: "en los cuales anduvisteis en otro tiempo, siguiendo la corriente de este mundo, conforme al príncipe de la potestad del aire, el espíritu que ahora opera en los hijos de desobediencia,",
-            },
-            {
-                n: 3,
-                text: "entre los cuales también todos nosotros vivimos en otro tiempo en los deseos de nuestra carne, haciendo la voluntad de la carne y de los pensamientos, y éramos por naturaleza hijos de ira, lo mismo que los demás.",
-            },
-            {
-                n: 4,
-                text: "Pero Dios, que es rico en misericordia, por su gran amor con que nos amó,",
-            },
-            {
-                n: 5,
-                text: "aun estando nosotros muertos en pecados, nos dio vida juntamente con Cristo (por gracia sois salvos),",
-            },
-            {
-                n: 6,
-                text: "y juntamente con Él nos resucitó, y asimismo nos hizo sentar en los lugares celestiales con Cristo Jesús,",
-            },
-            {
-                n: 7,
-                text: "para mostrar en los siglos venideros las abundantes riquezas de su gracia en su bondad para con nosotros en Cristo Jesús.",
-            },
-            {
-                n: 8,
-                text: "Porque por gracia sois salvos por medio de la fe; y esto no de vosotros, pues es don de Dios;",
-            },
-            {
-                n: 9,
-                text: "no por obras, para que nadie se gloríe.",
-            },
-        ],
-    },
+    /* --- Programa Domingo 15 --- */
 
-    worship: {
-        title1: "Coros de Alabanza",
-        title2: "Coro",
-    },
+    "2026-11-15": {
+        backButton: "Go back to language selection",
 
-    greeting: "Tiempo de saludarse",
+        mainHeading: "Programa del Culto Dominical",
 
-    testimony: {
-        title: "Testimonios",
-        subtitle: "Espacio para compartir las maravillas y fidelidad de Dios.",
-    },
+        pastor: "Roberto Rodríguez Albavera, Pastor",
 
-    prayer: {
-        intercession: "intercesión",
-        title: "Oración Pastoral",
-        subtitle: "Motivos y peticiones de oración.",
-    },
+        liturgy: "liturgia dominical",
 
-    offering: {
-        title: "Presentación de Diezmos y ofrendas",
-        subtitle: "Proverbios 3:9–10",
-        verses: "9 Honra a Jehová con tus bienes, Y con las primicias de todos tus frutos; 10 Y serán llenos tus graneros con abundancia, Y tus lagares rebosarán de mosto.",
-        parishioner: "",
-    },
+        mainTitle: "Orden del Culto",
 
-    reflection: {
-        title: "meditación pastoral",
-        text: "Antes de ofrendar, es muy importante que examinemos nuestra actitud y motivación. ¿Le estamos dando a Dios las primicias o le estamos dando sobras? ¿Lo hacemos con un corazón lleno de gratitud o por compromiso? Más que la cantidad de lo que ofrendamos, a Dios le importa la actitud con la cual traemos nuestras ofrendas ante Él. Honramos a Dios cuando traemos ante Él los primeros frutos de nuestro trabajo y esfuerzo. Dios es quien nos suple lo que necesitamos, todo viene de  Él y Él merece que le ofrendemos lo mejor. Honremos hoy a Dios con nuestras ofrendas y con corazones llenos de gratitud y adoración por todas sus bondades.",
-    },
+        welcome: {
+            title: "Bienvenida",
+            subtitle: "Cordial saludo a la congregación y a las visitas.",
+        },
 
-    doxology: {
-        tag: "mensaje & doxología",
-        title: "Sermón",
-        subtitle: "Roberto Rodríguez Albavera, Pastor",
-        titleText: "doxología de bendición • –",
-        text: "«»",
-    },
+        reading: {
+            title: "Lectura Bíblica",
+            reference: "Salmo 100",
+            verses: [
+                {
+                    n: 1,
+                    text: "Cantad alegres a Dios, habitantes de toda la tierra.",
+                },
+                {
+                    n: 2,
+                    text: "Servid a Jehová con alegría; Venid ante su presencia con regocijo.",
+                },
+                {
+                    n: 3,
+                    text: "Reconoced que Jehová es Dios; Él nos hizo, y no nosotros a nosotros mismos; Pueblo suyo somos, y ovejas de su prado.",
+                },
+                {
+                    n: 4,
+                    text: "Entrad por sus puertas con acción de gracias, Por sus atrios con alabanza; Alabadle, bendecid su nombre.",
+                },
+                {
+                    n: 5,
+                    text: "Porque Jehová es bueno; para siempre es su misericordia, Y su verdad por todas las generaciones.",
+                },
+            ],
+        },
 
-    communion: {
-        title: "Santa Cena y Bendición pastoral",
-        scriptureReference: "1 Pedro 5:8-11",
-        verses: "8 Sed sobrios, y velad; porque vuestro adversario el diablo, como león rugiente, anda alrededor buscando a quien devorar; 9 al cual resistid firmes en la fe, sabiendo que los mismos padecimientos se van cumpliendo en vuestros hermanos en todo el mundo. 10 Mas el Dios de toda gracia, que nos llamó a su gloria eterna en Jesucristo, después que hayáis padecido un poco de tiempo, Él mismo os perfeccione, afirme, fortalezca y establezca. 11 A Él sea la gloria y el imperio por los siglos de los siglos. Amén.",
-    },
+        worship: {
+            title1: "Coros de Alabanza",
+            title2: "Coro",
+        },
 
-    announcements: {
-        title: "Avisos",
-        text: "Vida de la Iglesia & Eventos",
+        greeting: "Tiempo de saludarse",
+
+        testimony: {
+            title: "Testimonios",
+            subtitle:
+                "Espacio para compartir las maravillas y fidelidad de Dios.",
+        },
+
+        prayer: {
+            intercession: "intercesión",
+            title: "Oración Pastoral",
+            subtitle: "Motivos y peticiones de oración.",
+        },
+
+        offering: {
+            title: "Presentación de Diezmos y ofrendas",
+            subtitle: "1 Crónicas 29:16–18",
+            verses: "16 Oh Jehová Dios nuestro, toda esta abundancia que hemos preparado para edificar casa a tu santo nombre, de tu mano es, y todo es tuyo. 17 Yo sé, Dios mío, que tú escudriñas los corazones, y que la rectitud te agrada; por eso yo con rectitud de mi corazón voluntariamente te he ofrecido todo esto, y ahora he visto con alegría que tu pueblo, reunido aquí ahora, ha dado para ti espontáneamente. 18 Jehová, Dios de Abraham, de Isaac y de Israel nuestros padres, conserva perpetuamente esta voluntad del corazón de tu pueblo, y encamina su corazón a ti.",
+            parishioner: "",
+        },
+
+        reflection: {
+            title: "meditación pastoral",
+            paragraphs: [
+                {
+                    id: 1,
+                    paragraph:
+                        "Esta es una oración de David al ver todas las ofrendas que había traído el pueblo para la construcción del templo. David reconoció que todo lo que ofrecían lo habían recibido primero de Dios. Es Dios quien nos provee todo lo que tenemos, por eso no debería ser difícil darle nuestras ofrendas. De todas formas, todo lo que tenemos le pertenece a Él.",
+                },
+                {
+                    id: 2,
+                    paragraph:
+                        "Una vez más, vemos la importancia de dar de forma voluntaria y con alegría. A Dios le interesa la actitud nuestra al traer las ofrendas. Busquemos siempre dar con el corazón vuelto hacia Dios, hacia su grandeza y recordando todas las cosas maravillosas que él nos ha dado. ¡Alabemos a Dios con nuestras ofrendas!",
+                },
+            ],
+        },
+
+        doxology: {
+            tag: "mensaje & doxología",
+            title: "Sermón",
+            subtitle: "Roberto Rodríguez Albavera, Pastor",
+            titleText: "doxología de bendición • Judas 24– 25",
+            text: "«24 Y a aquel que es poderoso para guardaros sin caída, y presentaros sin mancha delante de su gloria con gran alegría, 25 al único y sabio Dios, nuestro Salvador, sea gloria y majestad, imperio y potencia, ahora y por todos los siglos. Amén.»",
+        },
+
+        communion: {
+            title: "Santa Cena y Bendición pastoral",
+            scriptureReference: "",
+            verses: "",
+        },
     },
 };
 
-export const en = {
-    backButton: "Volver a la selección de idioma",
+const enPrograms = {
+    "2026-11-08": {
+        backButton: "Volver a la selección de idioma",
 
-    mainHeading: "Sunday Service Program",
+        mainHeading: "Sunday Service Program",
 
-    pastor: "Pastor Roberto Rodríguez Albavera",
+        pastor: "Pastor Roberto Rodríguez Albavera",
 
-    liturgy: "Sunday Liturgy",
+        liturgy: "Sunday Liturgy",
 
-    mainTitle: "Order of Worship",
+        mainTitle: "Order of Worship",
 
-    welcome: {
-        title: "Welcome",
-        subtitle: "Warm greetings to the congregation and our visitors.",
+        welcome: {
+            title: "Welcome",
+            subtitle: "Warm greetings to the congregation and our visitors.",
+        },
+
+        reading: {
+            title: "Bible Reading",
+            reference: "Philippians 4:1–9",
+            verses: [
+                {
+                    n: 1,
+                    text: "Therefore, my brothers, whom I love and long for, my joy and crown, stand firm thus in the Lord, my beloved.",
+                },
+                {
+                    n: 2,
+                    text: "I entreat Euodia and I entreat Syntyche to agree in the Lord.",
+                },
+                {
+                    n: 3,
+                    text: "Yes, I ask you also, true companion, help these women, who have labored side by side with me in the gospel together with Clement and the rest of my fellow workers, whose names are in the book of life.",
+                },
+                {
+                    n: 4,
+                    text: "Rejoice in the Lord always; again I will say, rejoice.",
+                },
+                {
+                    n: 5,
+                    text: "Let your reasonableness be known to everyone. The Lord is at hand;",
+                },
+                {
+                    n: 6,
+                    text: "do not be anxious about anything, but in everything by prayer and supplication with thanksgiving let your requests be made known to God.",
+                },
+                {
+                    n: 7,
+                    text: "And the peace of God, which surpasses all understanding, will guard your hearts and your minds in Christ Jesus.",
+                },
+                {
+                    n: 8,
+                    text: "Finally, brothers, whatever is true, whatever is honorable, whatever is just, whatever is pure, whatever is lovely, whatever is commendable, if there is any excellence, if there is anything worthy of praise, think about these things.",
+                },
+                {
+                    n: 9,
+                    text: "What you have learned and received and heard and seen in me—practice these things, and the God of peace will be with you.",
+                },
+            ],
+        },
+
+        worship: {
+            title1: "Hymns of Praise",
+            title2: "Song",
+        },
+
+        greeting: "Time to greet each other",
+
+        testimony: {
+            title: "Testimonials",
+            subtitle: "A space to share God's wonders and faithfulness.",
+        },
+
+        prayer: {
+            intercession: "intercession",
+            title: "Pastoral Prayer",
+            subtitle: "Prayer requests and motives.",
+        },
+
+        offering: {
+            title: "Tithes and Offerings",
+            subtitle: "1 Cotinthians 16:2a",
+            verses: "On the first day of every week, each of you is to put something aside and store it up, as he may prosper, so that there will be no collecting when I come.",
+            parishioner: "",
+        },
+
+        reflection: {
+            title: "pastoral reflection",
+            paragraphs: [
+                {
+                    id: 1,
+                    paragraph:
+                        "Giving is not something we do lightly without reflecting before God. It is a conscious act of obedience and an act of praise and worship to God. Let us give according to what we have received, and we must reflect on the blessings we have received from God before giving.",
+                },
+                {
+                    id: 2,
+                    paragraph:
+                        "Each of us should bring our offering to the weekly meeting according to how we have been blessed. We give according to what God has provided for us, and we do so with gratitude for the blessings we have received from His hand. Let us bring our offerings to the temple and contribute to the growth of God’s work",
+                },
+            ],
+        },
+
+        doxology: {
+            tag: "message & doxology",
+            title: "Sermon",
+            subtitle: "Pastor Roberto Rodríguez Albavera",
+            titleText: "doxology of blessing • 1 Peter 5:10–11",
+            text: "«10 And after you have suffered a little while, the God of all grace, who has called you to his eternal glory in Christ, will himself restore, confirm, strengthen, and establish you. 11 To him be the dominion forever and ever. Amen.»",
+        },
+        communion: {
+            title: "Communion and Pastoral Blessing",
+            scriptureReference: "",
+            verses: "",
+        },
+
+        announcements: {
+            title: "Announcements",
+            text: "Life of the Church & Events",
+        },
     },
 
-    reading: {
-        title: "Bible Reading",
-        reference: "Ephesians 2:1–9",
-        verses: [
-            {
-                n: 1,
-                text: "And you were dead in the trespasses and sins",
-            },
-            {
-                n: 2,
-                text: "in which you once walked, following the course of this world, following the prince of the power of the air, the spirit that is now at work in the sons of disobedience—",
-            },
-            {
-                n: 3,
-                text: "among whom we all once lived in the passions of our flesh, carrying out the desires of the flesh and the mind, and were by nature children of wrath, like the rest of mankind.",
-            },
-            {
-                n: 4,
-                text: "But God, being rich in mercy, because of the great love with which he loved us,",
-            },
-            {
-                n: 5,
-                text: "even when we were dead in our trespasses, made us alive together with Christ—by grace you have been saved—",
-            },
-            {
-                n: 6,
-                text: "and raised us up with him and seated us with him in the heavenly places in Christ Jesus,",
-            },
-            {
-                n: 7,
-                text: "so that in the coming ages he might show the immeasurable riches of his grace in kindness toward us in Christ Jesus.",
-            },
-            {
-                n: 8,
-                text: "For by grace you have been saved through faith. And this is not your own doing; it is the gift of God,",
-            },
-            {
-                n: 9,
-                text: "not a result of works, so that no one may boast.",
-            },
-        ],
-    },
+    /*  --- Sunday the 15th program EN --- */
 
-    worship: {
-        title1: "Hymns of Praise",
-        title2: "Song",
-    },
+    "2026-11-15": {
+        backButton: "Volver a la selección de idioma",
 
-    greeting: "Time to greet each other",
+        mainHeading: "Sunday Service Program",
 
-    testimony: {
-        title: "Testimonials",
-        subtitle: "A space to share God's wonders and faithfulness.",
-    },
+        pastor: "Pastor Roberto Rodríguez Albavera",
 
-    prayer: {
-        intercession: "intercession",
-        title: "Pastoral Prayer",
-        subtitle: "Prayer requests and motives.",
-    },
+        liturgy: "Sunday Liturgy",
 
-    offering: {
-        title: "Tithes and Offerings",
-        subtitle: "Proverbs 3:9–10",
-        verses: "9 Honor the Lord with your wealth and with the firstfruits of all your produce; 10 then your barns will be filled with plenty, and your vats will be bursting with wine.",
-        parishioner: "",
-    },
+        mainTitle: "Order of Worship",
 
-    reflection: {
-        title: "pastoral reflection",
-        text: "Before we give an offering, it is very important that we examine our attitude and motivation. Are we giving God the firstfruits, or are we giving Him leftovers? Do we do so with a heart full of gratitude, or out of obligation? More than the amount we give, God cares about the attitude with which we bring our offerings before Him. We honor God when we bring before Him the firstfruits of our labor and effort. God is the one who provides us with what we need; everything comes from Him, and He deserves the very best we have to offer. Let us honor God today with our offerings and with hearts full of gratitude and worship for all His goodness.",
-    },
+        welcome: {
+            title: "Welcome",
+            subtitle: "Warm greetings to the congregation and our visitors.",
+        },
 
-    doxology: {
-        tag: "message & doxology",
-        title: "Sermon",
-        subtitle: "Pastor Roberto Rodríguez Albavera",
-        titleText: "doxology of blessing • –",
-        text: "«»",
-    },
-    communion: {
-        title: "Communion and Pastoral Blessing",
-        scriptureReference: "1 Peter 5:8-11",
-        verses: "8 Be sober-minded; be watchful. Your adversary the devil prowls around like a roaring lion, seeking someone to devour. 9 Resist him, firm in your faith, knowing that the same kinds of suffering are being experienced by your brotherhood throughout the world. 10 And after you have suffered a little while, the God of all grace, who has called you to his eternal glory in Christ, will himself restore, confirm, strengthen, and establish you. 11 To him be the dominion forever and ever. Amen.",
-    },
+        reading: {
+            title: "Bible Reading",
+            reference: "Psalm 100",
+            verses: [
+                {
+                    n: 1,
+                    text: "Make a joyful noise to the Lord, all the earth!",
+                },
+                {
+                    n: 2,
+                    text: "Serve the Lord with gladness! Come into his presence with singing!",
+                },
+                {
+                    n: 3,
+                    text: "Know that the Lord, he is God! It is he who made us, and we are his; we are his people, and the sheep of his pasture.",
+                },
+                {
+                    n: 4,
+                    text: "Enter his gates with thanksgiving, and his courts with praise! Give thanks to him; bless his name!",
+                },
+                {
+                    n: 5,
+                    text: "For the Lord is good; his steadfast love endures forever, and his faithfulness to all generations.",
+                },
+            ],
+        },
 
-    announcements: {
-        title: "Announcements",
-        text: "Life of the Church & Events",
+        worship: {
+            title1: "Hymns of Praise",
+            title2: "Song",
+        },
+
+        greeting: "Time to greet each other",
+
+        testimony: {
+            title: "Testimonials",
+            subtitle: "A space to share God's wonders and faithfulness.",
+        },
+
+        prayer: {
+            intercession: "intercession",
+            title: "Pastoral Prayer",
+            subtitle: "Prayer requests and motives.",
+        },
+
+        offering: {
+            title: "Tithes and Offerings",
+            subtitle: "1 Chronicles 29:16–18",
+            verses: "16 O Lord our God, all this abundance that we have provided for building you a house for your holy name comes from your hand and is all your own. 17 I know, my God, that you test the heart and have pleasure in uprightness. In the uprightness of my heart I have freely offered all these things, and now I have seen your people, who are present here, offering freely and joyously to you. 18 O Lord, the God of Abraham, Isaac, and Israel, our fathers, keep forever such purposes and thoughts in the hearts of your people, and direct their hearts toward you.",
+            parishioner: "",
+        },
+
+        reflection: {
+            title: "pastoral reflection",
+            paragraphs: [
+                {
+                    id: 1,
+                    paragraph:
+                        "This is a prayer David offered when he saw all the offerings the people had brought for the construction of the temple. David recognized that everything they were offering had first been given to them by God. It is God who provides us with everything we have, so it shouldn’t be difficult to give Him our offerings. After all, everything we have belongs to Him.",
+                },
+                {
+                    id: 2,
+                    paragraph:
+                        "Once again, we see the importance of giving willingly and joyfully. God cares about our attitude when we bring our offerings. Let us always seek to give with our hearts turned toward God, toward His greatness, and remembering all the wonderful things He has given us. Let us praise God with our offerings!",
+                },
+            ],
+        },
+
+        doxology: {
+            tag: "message & doxology",
+            title: "Sermon",
+            subtitle: "Pastor Roberto Rodríguez Albavera",
+            titleText: "doxology of blessing • Jude 24–25",
+            text: "«24 Now to him who is able to keep you from stumbling and to present you blameless before the presence of his glory with great joy, 25 to the only God, our Savior, through Jesus Christ our Lord, be glory, majesty, dominion, and authority, before all time and now and forever. Amen.»",
+        },
+        communion: {
+            title: "Communion and Pastoral Blessing",
+            scriptureReference: "",
+            verses: "",
+        },
     },
 };
+
+export const es = pickByDate(esPrograms);
+export const en = pickByDate(enPrograms);
+
+type Songs = { first: string[]; second: string[] };
+
+export const songs = pickByDate<Songs>({
+    "2026-11-08": {
+        first: ["Su Amor es para Siempre", "La Canción del Espíritu"],
+        second: ["Mi Alma Espera", "Fue tu Gracia"],
+    },
+
+    "2026-11-15": {
+        first: ["Tu Iglesia", "Gracia Sublime es"],
+        second: ["Dios Ha Sido Bueno", "Fue Tu Gracia"],
+    },
+});
