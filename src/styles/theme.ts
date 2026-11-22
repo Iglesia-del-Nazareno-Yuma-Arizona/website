@@ -67,7 +67,7 @@ export const theme = {
     },
 
     font: {
-        inter: "'Inter', sans-serif",
+        inter: "'Inter Variable', 'Inter', sans-serif",
     },
 };
 

@@ -426,63 +426,68 @@ export const DoxologyTitle = styled.span`
     display: block;
 `;
 
-/* --- Styles for Tribute card for Sunday 10/25/2026 (can be deleted afterwards) --- */
+/* --- Styles for Announcements in Miscellaneous Card (which is optional) --- */
 
-export const TributeCard = styled.section`
-    padding: 1.25rem;
-    border-radius: ${borderRadius("lg")};
-    background-color: ${color("surfaceContainerLowest")};
-    border: 1px solid rgba(199, 198, 202, 0.3);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+export const MiscellaneousSubheader = styled.p`
+    font-size: 14px;
+    color: ${color("outline")};
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin: 0.125rem 0 0 0;
+`;
+
+export const AnnouncementsList = styled.ul`
+    list-style: none;
+    margin: 0.25rem 0 0 0;
+    padding: 0.875rem;
+    background-color: ${color("surfaceContainerLow")};
+    border-radius: 0.75rem;
+    border: 1px solid rgba(199, 198, 202, 0.2);
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0.875rem;
-    text-align: center;
-    margin: 2rem 0;
+    gap: 0.625rem;
+    color: ${color("onSurface")};
 `;
 
-export const Badge = styled.div`
-    display: inline-flex;
-    align-items: center;
+export const AnnouncementsRow = styled.li<{ $hasDivider?: boolean }>`
+    display: flex;
+    align-items: flex-start;
     gap: 0.5rem;
-    padding: 0.125rem 0.75rem;
-    border-radius: ${borderRadius("full")};
-    background-color: rgba(113, 91, 38, 0.15);
-    color: ${color("secondary")};
-    font-size: 14px;
-    font-weight: 600;
-    letter-spacing: 0.05rem;
-    text-transform: uppercase;
 
-    .badge-icon {
-        font-size: 0.875rem;
-        color: ${color("secondary")};
-    }
+    ${({ $hasDivider }) =>
+        $hasDivider &&
+        `
+padding-top: 0.5rem;
+border-top: 1px solid rgba(199, 198, 202, .2)`}
 `;
 
-export const ImageWrapper = styled.div`
-    overflow: hidden;
-    border-radius: 0.75rem;
-    border: 1px sollid rgba(199, 198, 202, 0.3);
-    max-width: 20rem;
-    width: 100%;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-`;
-
-export const TributeImage = styled.img`
-    width: 100%;
-    height: auto;
-    object-fit: cover;
+export const AnnouncementIcon = styled.img`
+    width: 25px;
+    height: 25px;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
     display: block;
 `;
 
-export const TributeCaption = styled.p`
-    font-size: 1.1rem;
-    font-weight: 600;
-    color: ${color("onSurface")};
+export const AnnouncementBody = styled.div`
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
     line-height: 1.625;
-    max-width: 20rem;
+`;
+
+export const AnnouncementLead = styled.span`
+    font-weight: 500;
+    color: ${color("onSurface")};
+
+    strong {
+        color: ${color("secondary")};
+        font-weight: 600;
+    }
+`;
+
+export const AnnouncementDetails = styled.p`
     margin: 0;
-    padding-top: 0.25rem;
+    font-size: 17px;
+    color: ${color("onSurfaceVariant")};
 `;

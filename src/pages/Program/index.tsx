@@ -9,7 +9,7 @@ import Song from "./components/Song";
 import Offering from "./components/Offering";
 import Doxology from "./components/Doxology";
 import { useDocumentTitle } from "../../hooks/useDocumentTitle";
-import Miscellaneous from "./components/Miscellaneous";
+import Miscellaneous, { type Announcement } from "./components/Miscellaneous";
 import { songs } from "./translation";
 
 const Program = () => {
@@ -25,6 +25,10 @@ const Program = () => {
     const paragraphs = t("reflection.paragraphs", {
         returnObjects: true,
     }) as Paragraph[];
+
+    const announcements = t("announcements.list", {
+        returnObjects: true,
+    }) as Announcement[];
 
     return (
         <S.BulletinContainer className="reveal reveal-up">
@@ -144,16 +148,15 @@ const Program = () => {
                         text={t("doxology.text")}
                     />
 
-                    {has("announcements.title") && (
-                        <Miscellaneous
-                            dot="primary"
-                            number={next()}
-                            category="actualizaciones / updates"
-                            icon="campaign"
-                            title={t("announcements.title")}
-                            text={t("announcements.text")}
-                        />
-                    )}
+                    <Miscellaneous
+                        dot="primary"
+                        number={next()}
+                        category="actualizaciones / updates"
+                        icon="campaign"
+                        title={t("announcements.title")}
+                        subtext={t("announcements.subtext")}
+                        items={announcements}
+                    />
                 </S.TimelineContainer>
             </S.SectionWrapper>
         </S.BulletinContainer>
