@@ -16,7 +16,7 @@ const Program = () => {
     useDocumentTitle("Programa - Orden del Culto");
     const { t, i18n } = useTranslation("program");
 
-    const has = (key: string) => i18n.exists(key, { ns: "program" });
+    /* const has = (key: string) => i18n.exists(key, { ns: "program" }); */
 
     let count = 0;
     const next = () => String(++count).padStart(2, "0");
