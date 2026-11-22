@@ -1,5 +1,10 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
+
+// Font imports
+import "@fontsource-variable/inter";
+import "@fontsource-variable/inter/wght-italic.css";
+
 import { ThemeProvider } from "styled-components";
 import App from "./App.tsx";
 import { theme } from "./styles/theme.ts";
